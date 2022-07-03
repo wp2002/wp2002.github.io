@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:20:47" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
+      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:23:45" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
     </span>
 
   
@@ -219,77 +219,14 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
 <p>之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Java官方API文档</a></p>
-<h1 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>·单行注释：//注释信息<br>·多行注释：/<em>注释信息</em>/<br>·文档注释：/*<em>注释信息</em>/    </p>
-<h4 id="常量：程序运行中值不改变的量"><a href="#常量：程序运行中值不改变的量" class="headerlink" title="常量：程序运行中值不改变的量"></a>常量：程序运行中值不改变的量</h4><p>｜字符串常量｜用双引号括起来的内容｜“HelloWord”｜<br>｜—｜—：｜：—：｜<br>｜整数常量｜不带小数的数字｜666，-88｜<br>｜小数常量｜带小数的数字｜13.14，-5.12｜<br>｜字符常量｜用单引号括起来的内容｜‘A’，‘0’｜<br>｜布尔常量｜布尔值，标志真假｜true，false｜<br>｜空常量｜一个特殊的值，空值｜值是null｜<br> <em><strong>注：只有空常量不能直接输出</strong></em></p>
-<p>数据类型—基础数据类型—数值型—整数byte 1,short 2,int 4,long 8<br>                                —浮点数float 4,double 8<br>                            —字符char 2<br>                     —非数值型—布尔boolean 1<br>        —引用数据类型—类class<br>                     —接口interface<br>                     —数组[]</p>
-<h4 id="变量：在程序运行中可以改变值的量"><a href="#变量：在程序运行中可以改变值的量" class="headerlink" title="变量：在程序运行中可以改变值的量"></a>变量：在程序运行中可以改变值的量</h4><p>1.Main中变量名不能重复<br>2.定义变量一定要赋值，不赋值不能使用<br>3.long类型报错整数太大，在赋的值后加L<br>4.浮点数默认为double类型<br>5.在定义float时，在赋的值后加F</p>
-<h4 id="常见命名约定："><a href="#常见命名约定：" class="headerlink" title="常见命名约定："></a>常见命名约定：</h4><ol>
-<li>小驼峰命名法：（针对方法、变量）<ol>
-<li>标识符是一个单词时，首字母小写</li>
-<li>标识符由多个单词组成时，第一个单词首字母小写，其他单词首字母大写</li>
-</ol>
-</li>
-<li>大驼峰命名法：（针对类）<ol>
-<li>标识符是一个单词时，首字母大写</li>
-<li>标识符由多个单词组成时，每个单词的首字母都大写</li>
-</ol>
-</li>
-</ol>
-<h4 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h4><p>·运算符：对常量或者变量进行操作的符号<br>·表达式：用运算符把常量或者变量连接起来符合java语法的式子就可以称为表达式<br>·除法（/）得到的商，取余（%）得到的是余数<br>·整数相除只能得到整数，要想得到小数，必须有浮点数的参与<br>·算术表达式中包含多个基本数据类型的值的时候，算术表达式的类型会自动提生<br>·提升规则：<br>1.byte类型，short类型和char类型将被提升到int类型<br>2.整个表达式的类型自动提升到表达式中最高等级操作数同样的类型<br>等级顺序：byte、shor、char-&gt;int-&gt;long-&gt;float-&gt;double</p>
-<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>·&amp;与:a，b结果有false则false<br>·|或：a，b结果有true则true<br>·^异或：a，b结果相同为false，不同为true<br>·!非：!a结果和a的结果相反</p>
-<h4 id="短路逻辑运算符"><a href="#短路逻辑运算符" class="headerlink" title="短路逻辑运算符"></a>短路逻辑运算符</h4><p>·&amp;&amp;：短路与：和&amp;相同，但有短路效果<br>·||：短路或：和｜相同，但有短路效果<br>·&amp;：无论左边真假，右边都要执行<br>·&amp;&amp;：如果左边为真，右边执行，如果左边为假，右边不执行<br>·|：无论左边真假，右边都要执行<br>·||：如果左边为假，右边酒哟啊执行，如果左边为真，右边不用执行<br><em><strong>最常用的逻辑运算符：&amp;&amp;、||、！</strong></em></p>
-<h4 id="三元运算符："><a href="#三元运算符：" class="headerlink" title="三元运算符："></a>三元运算符：</h4><p>·格式：关系表达式？表达式1:表达式2<br>·范例：a&gt;b?a:b<br>·首先计算关系表达式的值<br>·如果值为true，表达式1的值就是运算结果<br>·如果值为false，表达式2的值就是运算结果</p>
-<h4 id="数据输入："><a href="#数据输入：" class="headerlink" title="数据输入："></a>数据输入：</h4><p>Scanner的基本使用步骤：<br>1.导包：import java.util.Scanner;<br><em><strong>导包的动作必须出现在类定义上边，即出现在public class 类名上边</strong></em><br>2.创建对象：Scanner sc = new Scanner(System.in);<br><em><strong>上面这个格式里，只有sc是变量名，可以变，其他的都不允许变</strong></em><br>3.接收数据：int I =sc.nextInt();<br><em><strong>上面这个格式里边，只有i是变量名，可以变，其他的都不允许变sc要与上边的sc相同</strong></em></p>
-<h4 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h4><p>1.流程控制<br>    1. 分支结构(if, switch)<br>    2. 循环结构(for, whiled…while)<br>顺序结构：按代码的先后顺序执行<br>分支结构<br>2. if语句<br>    1. 格式一：if（关系表达式）{语句体；}<br>    2. 格式二：if（关系表达式）{语句体1；}else{语句体2；}<br>    3. 格式三：if（关系式表达式1）{语句体1；}else if（语句表达式2）{语句体2；}…else{语句体n+1；}<br>3. switch语句<br>    1. 格式:    switch(){<br>                    case “”:<br>                        dreak;<br>                    case “”:<br>                        dreak;<br>                    default:<br>                        dreak;<br>                }</p>
-<h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>组成：初始化语句、条件判断语句、循环体语句、条件控制语句</p>
-<ol>
-<li>for语句<ol>
-<li>格式：fou（初始化语句；条件判断语句；条件控制语句）{循环语句体；}</li>
-</ol>
-</li>
-<li>while语句<ol>
-<li>基本格式：while（条件判断语句）{循环体语句；}</li>
-<li>完整格式：初始化语句；while（条件判断语句）{循环体语句；条件控制语句；}</li>
-</ol>
-</li>
-<li>do……while语句<ol>
-<li>基本格式：do{循环体语句；}while（条件判断语句）；</li>
-<li>完整格式：初始化语句；do{循环体语句；条件控制语句；}while（条件判断语句）；</li>
-</ol>
-</li>
-<li>死循环：<ol>
-<li>for语句：For（；；）{}表示条件永远为真</li>
-<li>while语句：while（true）{}表条件永远为真</li>
-<li>do……while语句：do{}while（true）；表条件永远为真</li>
-</ol>
-</li>
-</ol>
-<p><em><strong>一般用while的死循环</strong></em><br>5. 三种循环的区别：<br>    1. for循环和while循环先判断条件是否成立，然后决定是否执行循环体（先判断后执行<br>    2. do…while循环先执行一次循环体，然后判断条件是否成立，是否继续执行循环体（先执行后判断）</p>
-<h4 id="跳转控制语句："><a href="#跳转控制语句：" class="headerlink" title="跳转控制语句："></a>跳转控制语句：</h4><p>·Continue：用在循环中，基于条件控制，跳过某次循环体内容的执行，继续下一次的执行<br>·Break：用在循环中，基于条件控制，终止循环体内容的执行，也就是说结束当前的整个循环</p>
-<h4 id="产生一个随机数-Random"><a href="#产生一个随机数-Random" class="headerlink" title="产生一个随机数 Random"></a>产生一个随机数 Random</h4><ol>
-<li>使用步骤：<ol>
-<li>导包：import java.util.Random;</li>
-</ol>
- <em><strong>导包的动作必须出线在类定义的上面</strong></em><ol start="2">
-<li>创建对象：Random r=new.Random;</li>
-</ol>
- <em><strong>上面这个格式里面，r是变量名，可以变，其他都不允许改变</strong></em><ol start="3">
-<li>获取随机数：int number=r.nextInt(10);//获取数据的范围：0-10包括0，不包括10</li>
-</ol>
- <em><strong>上面这个格式里，number是变量名，可以变，数字10可以变，其他都不允许改变</strong></em></li>
-</ol>
-<h4 id="数组-定义格式"><a href="#数组-定义格式" class="headerlink" title="数组 定义格式"></a>数组 定义格式</h4><p>·数据类型[]变量名（推荐）<br>    int[] arr<br>·数据类型 变量名[]<br>    int arr[]</p>
-<ol>
-<li>数组初始化：<ol>
-<li>动态初始化：只指定数组长度，由系统进行赋值</li>
-<li>格式：数据类型[]变量名=new 数据类型[数组长度]；<br> int[] arr=new int[3];</li>
-<li>静态初始化：</li>
-</ol>
-</li>
-</ol>
-<h4 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h4><p>·方法重载的描述：指同一个类中定义的多个方法之间的关系，满足下列条件的多个方法相互构成重载<br>·多个方法在同一个类中<br>·多个方法具有相同的方法名<br>·多个方法的参数不同，类型不同或者数量不同</p>
-<h4 id="方法的参数传递"><a href="#方法的参数传递" class="headerlink" title="方法的参数传递"></a>方法的参数传递</h4><p>·方法参数传递的基本类型：对于基本数据类型的参数，形式参数的改变，不影响实际参数的值<br>·方法参数传递的引用类型：对于引用类型的参数，形式参数改变，影响实际参数的值</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/07/03/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

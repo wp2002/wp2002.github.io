@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wp2002.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"归档","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="序 之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档 Java SE基础注释·单行注释：&#x2F;&#x2F;注释信息·多行注释：&#x2F;注释信息&#x2F;·文档注释：&#x2F;*注释信息&#x2F;     常量：程序运行中值不改变的量｜字符串常量｜用双引号">
+    <meta name="description" content="序 之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSE学习笔记">
 <meta property="og:url" content="https://wp2002.github.io/2022/07/03/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="wp2002.blog">
-<meta property="og:description" content="序 之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档 Java SE基础注释·单行注释：&#x2F;&#x2F;注释信息·多行注释：&#x2F;注释信息&#x2F;·文档注释：&#x2F;*注释信息&#x2F;     常量：程序运行中值不改变的量｜字符串常量｜用双引号">
+<meta property="og:description" content="序 之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-03T14:20:47.309Z">
+<meta property="article:modified_time" content="2022-07-03T14:23:45.939Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:20:47" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
+      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:23:45" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
     </span>
 
   
@@ -226,6 +226,7 @@
     <div class="post-body" itemprop="articleBody">
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
 <p>之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Java官方API文档</a></p>
+<span id="more"></span>
 <h1 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>·单行注释：//注释信息<br>·多行注释：/<em>注释信息</em>/<br>·文档注释：/*<em>注释信息</em>/    </p>
 <h4 id="常量：程序运行中值不改变的量"><a href="#常量：程序运行中值不改变的量" class="headerlink" title="常量：程序运行中值不改变的量"></a>常量：程序运行中值不改变的量</h4><p>｜字符串常量｜用双引号括起来的内容｜“HelloWord”｜<br>｜—｜—：｜：—：｜<br>｜整数常量｜不带小数的数字｜666，-88｜<br>｜小数常量｜带小数的数字｜13.14，-5.12｜<br>｜字符常量｜用单引号括起来的内容｜‘A’，‘0’｜<br>｜布尔常量｜布尔值，标志真假｜true，false｜<br>｜空常量｜一个特殊的值，空值｜值是null｜<br> <em><strong>注：只有空常量不能直接输出</strong></em></p>
 <p>数据类型—基础数据类型—数值型—整数byte 1,short 2,int 4,long 8<br>                                —浮点数float 4,double 8<br>                            —字符char 2<br>                     —非数值型—布尔boolean 1<br>        —引用数据类型—类class<br>                     —接口interface<br>                     —数组[]</p>
