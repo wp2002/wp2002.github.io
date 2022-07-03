@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-03T14:23:45.939Z">
+<meta property="article:modified_time" content="2022-07-03T14:30:17.982Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:23:45" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
+      <time title="Created: 2022-07-03 21:28:13 / Modified: 22:30:17" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
     </span>
 
   
@@ -227,9 +227,10 @@
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
 <p>之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Java官方API文档</a></p>
 <span id="more"></span>
-<h1 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>·单行注释：//注释信息<br>·多行注释：/<em>注释信息</em>/<br>·文档注释：/*<em>注释信息</em>/    </p>
-<h4 id="常量：程序运行中值不改变的量"><a href="#常量：程序运行中值不改变的量" class="headerlink" title="常量：程序运行中值不改变的量"></a>常量：程序运行中值不改变的量</h4><p>｜字符串常量｜用双引号括起来的内容｜“HelloWord”｜<br>｜—｜—：｜：—：｜<br>｜整数常量｜不带小数的数字｜666，-88｜<br>｜小数常量｜带小数的数字｜13.14，-5.12｜<br>｜字符常量｜用单引号括起来的内容｜‘A’，‘0’｜<br>｜布尔常量｜布尔值，标志真假｜true，false｜<br>｜空常量｜一个特殊的值，空值｜值是null｜<br> <em><strong>注：只有空常量不能直接输出</strong></em></p>
-<p>数据类型—基础数据类型—数值型—整数byte 1,short 2,int 4,long 8<br>                                —浮点数float 4,double 8<br>                            —字符char 2<br>                     —非数值型—布尔boolean 1<br>        —引用数据类型—类class<br>                     —接口interface<br>                     —数组[]</p>
+<h1 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h1><hr>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><hr>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>·单行注释：//注释信息<br>·多行注释：/<em>注释信息</em>/<br>·文档注释：/*<em>注释信息</em>/    </p>
+<h4 id="常量：程序运行中值不改变的量"><a href="#常量：程序运行中值不改变的量" class="headerlink" title="常量：程序运行中值不改变的量"></a>常量：程序运行中值不改变的量</h4><p>｜字符串常量｜用双引号括起来的内容｜“HelloWord”｜<br>｜整数常量｜不带小数的数字｜666，-88｜<br>｜小数常量｜带小数的数字｜13.14，-5.12｜<br>｜字符常量｜用单引号括起来的内容｜‘A’，‘0’｜<br>｜布尔常量｜布尔值，标志真假｜true，false｜<br>｜空常量｜一个特殊的值，空值｜值是null｜<br> <em><strong>注：只有空常量不能直接输出</strong></em></p>
 <h4 id="变量：在程序运行中可以改变值的量"><a href="#变量：在程序运行中可以改变值的量" class="headerlink" title="变量：在程序运行中可以改变值的量"></a>变量：在程序运行中可以改变值的量</h4><p>1.Main中变量名不能重复<br>2.定义变量一定要赋值，不赋值不能使用<br>3.long类型报错整数太大，在赋的值后加L<br>4.浮点数默认为double类型<br>5.在定义float时，在赋的值后加F</p>
 <h4 id="常见命名约定："><a href="#常见命名约定：" class="headerlink" title="常见命名约定："></a>常见命名约定：</h4><ol>
 <li>小驼峰命名法：（针对方法、变量）<ol>
@@ -248,7 +249,29 @@
 <h4 id="短路逻辑运算符"><a href="#短路逻辑运算符" class="headerlink" title="短路逻辑运算符"></a>短路逻辑运算符</h4><p>·&amp;&amp;：短路与：和&amp;相同，但有短路效果<br>·||：短路或：和｜相同，但有短路效果<br>·&amp;：无论左边真假，右边都要执行<br>·&amp;&amp;：如果左边为真，右边执行，如果左边为假，右边不执行<br>·|：无论左边真假，右边都要执行<br>·||：如果左边为假，右边酒哟啊执行，如果左边为真，右边不用执行<br><em><strong>最常用的逻辑运算符：&amp;&amp;、||、！</strong></em></p>
 <h4 id="三元运算符："><a href="#三元运算符：" class="headerlink" title="三元运算符："></a>三元运算符：</h4><p>·格式：关系表达式？表达式1:表达式2<br>·范例：a&gt;b?a:b<br>·首先计算关系表达式的值<br>·如果值为true，表达式1的值就是运算结果<br>·如果值为false，表达式2的值就是运算结果</p>
 <h4 id="数据输入："><a href="#数据输入：" class="headerlink" title="数据输入："></a>数据输入：</h4><p>Scanner的基本使用步骤：<br>1.导包：import java.util.Scanner;<br><em><strong>导包的动作必须出现在类定义上边，即出现在public class 类名上边</strong></em><br>2.创建对象：Scanner sc = new Scanner(System.in);<br><em><strong>上面这个格式里，只有sc是变量名，可以变，其他的都不允许变</strong></em><br>3.接收数据：int I =sc.nextInt();<br><em><strong>上面这个格式里边，只有i是变量名，可以变，其他的都不允许变sc要与上边的sc相同</strong></em></p>
-<h4 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h4><p>1.流程控制<br>    1. 分支结构(if, switch)<br>    2. 循环结构(for, whiled…while)<br>顺序结构：按代码的先后顺序执行<br>分支结构<br>2. if语句<br>    1. 格式一：if（关系表达式）{语句体；}<br>    2. 格式二：if（关系表达式）{语句体1；}else{语句体2；}<br>    3. 格式三：if（关系式表达式1）{语句体1；}else if（语句表达式2）{语句体2；}…else{语句体n+1；}<br>3. switch语句<br>    1. 格式:    switch(){<br>                    case “”:<br>                        dreak;<br>                    case “”:<br>                        dreak;<br>                    default:<br>                        dreak;<br>                }</p>
+<h4 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h4><ol>
+<li>流程控制<ol>
+<li>分支结构(if, switch)</li>
+<li>循环结构(for, whiled…while)</li>
+</ol>
+</li>
+<li>if语句<ol>
+<li>格式一：if（关系表达式）{语句体；}</li>
+<li>格式二：if（关系表达式）{语句体1；}else{语句体2；}</li>
+<li>格式三：if（关系式表达式1）{语句体1；}else if（语句表达式2）{语句体2；}…else{语句体n+1；}</li>
+</ol>
+</li>
+<li>switch语句<ol>
+<li>格式:<br> switch(){<br> case “”:<pre><code> break；
+</code></pre>
+ case “”:<pre><code> break;
+</code></pre>
+ default:<pre><code> break;
+</code></pre>
+ }</li>
+</ol>
+</li>
+</ol>
 <h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>组成：初始化语句、条件判断语句、循环体语句、条件控制语句</p>
 <ol>
 <li>for语句<ol>
