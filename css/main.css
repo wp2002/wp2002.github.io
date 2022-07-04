@@ -1539,7 +1539,7 @@ header.header {
   white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: block;
+  display: none;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -2624,7 +2624,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #de82fa;
+  background: #8e3770;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
