@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-05T03:12:44.848Z">
+<meta property="article:modified_time" content="2022-07-05T03:19:13.311Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-05 11:12:44" itemprop="dateModified" datetime="2022-07-05T11:12:44+08:00">2022-07-05</time>
+      <time title="Modified: 2022-07-05 11:19:13" itemprop="dateModified" datetime="2022-07-05T11:19:13+08:00">2022-07-05</time>
     </span>
 
   
@@ -311,13 +311,16 @@
 </ol>
 </li>
 <li>switch语句<ol>
-<li>格式:<br> switch(){<br> case “”:<pre><code> break；
+<li>格式:<pre><code> switch()&#123;
+ case &quot;&quot;:
+     break；
+ case &quot;&quot;:
+     break;
+ default:
+     break;
+ &#125;
 </code></pre>
- case “”:<pre><code> break;
-</code></pre>
- default:<pre><code> break;
-</code></pre>
- }</li>
+</li>
 </ol>
 </li>
 </ol>
@@ -493,9 +496,12 @@
 <li>字符串效果相当于字符数组（char[]），但是底层原理是字节数组（byte[])</li>
 </ol>
 </li>
-<li><p>字符串的比较<br>·使用“==”做比较：比较的是地址值是否相同<br>·字符串是对象，它比较内容是否相同，是通过一个方法来实现的，这个方法叫：equals（）注：逐一对比<br> Public boolean equals（Object an Object）：将此字符串与指定对象进行比较。由于我们比较的是字符串对象，所以参数直接传递一个字符串</p>
+<li><p>字符串的比较<br>·使用“==”做比较：比较的是地址值是否相同<br>·字符串是对象，它比较内容是否相同，是通过一个方法来实现的，这个方法叫：equals（）注：逐一对比</p>
+<pre><code> Public boolean equals（Object an Object）：将此字符串与指定对象进行比较。由于我们比较的是字符串对象，所以参数直接传递一个字符串
+</code></pre>
 </li>
-<li><p>遍历字符串的通用格式：<br> for(int i=0;i&lt;s.length();I++){<br> s.charAt(i);//就是字符串指定索引处的字符值<br>}</p>
+<li><p>遍历字符串的通用格式：</p>
+<p> for(int i=0;i&lt;s.length();I++){<br> s.charAt(i);//就是字符串指定索引处的字符值<br>}</p>
 </li>
 <li><p>String:</p>
 <ol>
@@ -525,7 +531,22 @@
 <li>Public String Builder（）    创建一个空白可变字符串对象，不含有任何内容</li>
 <li>public String Builder（String str）根据字符串的内容，来创建可变字符串对象</li>
 <li>Public String Builder(任意类型)：添加数据，并返回对象本身</li>
-<li>public String Builder reverse（）：返回相反的字符序列<br> 实例：    import java.util.Scanner;<br> public class 字符串反转 {<br> public static void main(String[] args) {<br> Scanner sc=new Scanner(System.in);<br> System.out.println(“请输入字符串”);<br> String s=sc.nextLine();<br> //String c=str(s);<br> String c=ss(s);<br> System.out.println(“s:”+c);<br>}<br>public static String ss(String s){<br>StringBuilder sb=new StringBuilder(s);<br>sb.reverse();<br>String ss=new String(sb);<br>return ss;<br>}<br>}</li>
+<li>public String Builder reverse（）：返回相反的字符序列<br> 实例：<br> 、、、 import java.util.Scanner;<br> public class 字符串反转 {<pre><code> public static void main(String[] args) &#123;
+     Scanner sc=new Scanner(System.in);
+     System.out.println(&quot;请输入字符串&quot;);
+     String s=sc.nextLine();
+     //String c=str(s);
+     String c=ss(s);
+     System.out.println(&quot;s:&quot;+c);
+ &#125;
+ public static String ss(String s)&#123;
+     StringBuilder sb=new StringBuilder(s);
+     sb.reverse();
+     String ss=new String(sb);
+     return ss;
+ &#125;
+</code></pre>
+ }</li>
 </ol>
 </li>
 </ol>
@@ -552,7 +573,7 @@
 <ol start="6">
 <li>String Builder和String相互转换<ol>
 <li>String Builder转换为string：<br> publicStringtoString():通过to String（）就可以实现把String Builder转换为String</li>
-<li>String转换为String Builder：<br> public String Builder（String s）：通过构造方法就可以把String转换为String Builder<br>实例：<br>public static void main(String[] args) {<br>//String Builder转化为String<br>StringBuilder sb=new StringBuilder();<br>sb.append(“hello”);<br>String s=sb.toString();<br>System.out.println(s);<br>//String转换为String Builder<br>String s=”hello”;<br>StringBuilder sb=new StringBuilder(s);<br>System.out.println(sb);<br>}</li>
+<li>String转换为String Builder：<br> public String Builder（String s）：通过构造方法就可以把String转换为String Builder<br>实例：<br>、、、<br>public static void main(String[] args) {<br>//String Builder转化为String<br>StringBuilder sb=new StringBuilder();<br>sb.append(“hello”);<br>String s=sb.toString();<br>System.out.println(s);<br>//String转换为String Builder<br>String s=”hello”;<br>StringBuilder sb=new StringBuilder(s);<br>System.out.println(sb);<br>}</li>
 </ol>
 </li>
 <li>更多方法···<br>·toCharArray()-&gt;将字符串拆分返回一个字符数组<br>·substring(start,end)-&gt;从start开始到end截取字符串返回一个新字符串<br>·replace(“a”,”b”)-&gt;将字符串中的a全部替换成b<br>·split(“,”)-&gt;将字符串以”,”分隔，返回一个字符串数组</li>
