@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-06T11:08:21.246Z">
+<meta property="article:modified_time" content="2022-07-06T11:17:24.466Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-06 19:08:21" itemprop="dateModified" datetime="2022-07-06T19:08:21+08:00">2022-07-06</time>
+      <time title="Modified: 2022-07-06 19:17:24" itemprop="dateModified" datetime="2022-07-06T19:17:24+08:00">2022-07-06</time>
     </span>
 
   
@@ -586,10 +586,7 @@
 </ol>
 <h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><hr>
 <ol>
-<li>内部类概述<br>在一个类中定义一个类<br>举例：在一个类A的内部定义一个类B，类B就被称为内部类<br>格式： public class 类名{<pre><code> 修饰符（public/private） class 类名&#123;
- &#125;
-</code></pre>
- }</li>
+<li>内部类概述<br>在一个类中定义一个类<br>举例：在一个类A的内部定义一个类B，类B就被称为内部类<br>格式：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;</span><br><span class="line">    修饰符（public/private） class 类名&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><strong>注：内部类一般为私有（private）</strong><br>2. 内部类的访问特点<br>    1. 内部类可以直接访问外部类的成员，包括私有<br>    2. 外部类药访问内部类成员，必须创建对象<br>3. 成员内部类<br>创建内部类对象格式：<br>外部类名.内部类名 对象名=外部类对象.内部类对象；（用于公有public）<br>范例：</p>
 <pre><code>Outer.Inner io=new Outer().Inner()；
@@ -713,7 +710,6 @@
 <li>修饰成员变量表示共享，该成员变量被所有对象共享<br>格式：public static 数据类型 变量名<br>例如：<br> public static String university；</li>
 </ol>
  <strong>访问方法：在最上边写类名.变量名=；</strong><br> 例如：<pre><code> student.university
- 
 </code></pre>
  特点：<ol>
 <li>非静态成员方法可以访问静态/非静态成员方法和成员变量</li>
@@ -724,9 +720,7 @@
 </li>
 <li>枚举<ol>
 <li>概述<br>·枚举是java重点一种特殊类型<br>·枚举的作用：是为了做信息的标注和信息的分类</li>
-<li>定义格式<br>修饰符 enum枚举名称{<br> 第一行都是罗列枚举实例的名称<br>}<br>例如： eunm Season{<pre><code> SPRING，SUMMER，AUTUMN，WINTER
-</code></pre>
- }</li>
+<li>定义格式<br>修饰符 enum枚举名称{<br> 第一行都是罗列枚举实例的名称<br>}<br>例如: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eunm Season&#123;</span><br><span class="line">    SPRING，SUMMER，AUTUMN，WINTER</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>枚举类的特点</li>
 <li>枚举类都是继承了枚举类型：java.lang.Enum</li>
 <li>枚举都是最终类，不可以被继承    </li>
