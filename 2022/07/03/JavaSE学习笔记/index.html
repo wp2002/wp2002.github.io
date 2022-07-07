@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-06T11:21:14.667Z">
+<meta property="article:modified_time" content="2022-07-07T13:52:35.256Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-SE"><span class="nav-number">2.</span> <span class="nav-text">Java SE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">2.1.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%EF%BC%9A%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%80%BC%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">常量：程序运行中值不改变的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%EF%BC%9A%E5%9C%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E5%80%BC%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">变量：在程序运行中可以改变值的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A%EF%BC%9A"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见命名约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.5.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.7.</span> <span class="nav-text">短路逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.1.8.</span> <span class="nav-text">三元运算符：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="nav-number">2.1.9.</span> <span class="nav-text">数据输入：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.10.</span> <span class="nav-text">分支语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.11.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%EF%BC%9A"><span class="nav-number">2.1.12.</span> <span class="nav-text">跳转控制语句：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E4%B8%80%E4%B8%AA%E9%9A%8F%E6%9C%BA%E6%95%B0-Random"><span class="nav-number">2.1.13.</span> <span class="nav-text">产生一个随机数 Random</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.14.</span> <span class="nav-text">数组 定义格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">2.1.15.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">2.1.16.</span> <span class="nav-text">方法的参数传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80"><span class="nav-number">2.2.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">成员变量和局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">2.2.3.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.4.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">2.4.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda"><span class="nav-number">2.5.</span> <span class="nav-text">Lambda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">2.6.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%8C%85"><span class="nav-number">2.6.1.</span> <span class="nav-text">导包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.6.2.</span> <span class="nav-text">修饰符：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%C2%B7%C2%B7%C2%B7"><span class="nav-number">3.</span> <span class="nav-text">连载中···</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-SE"><span class="nav-number">2.</span> <span class="nav-text">Java SE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">2.1.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%EF%BC%9A%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%80%BC%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">常量：程序运行中值不改变的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%EF%BC%9A%E5%9C%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E5%80%BC%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">变量：在程序运行中可以改变值的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A%EF%BC%9A"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见命名约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.5.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.7.</span> <span class="nav-text">短路逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.1.8.</span> <span class="nav-text">三元运算符：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="nav-number">2.1.9.</span> <span class="nav-text">数据输入：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.10.</span> <span class="nav-text">分支语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.11.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%EF%BC%9A"><span class="nav-number">2.1.12.</span> <span class="nav-text">跳转控制语句：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E4%B8%80%E4%B8%AA%E9%9A%8F%E6%9C%BA%E6%95%B0-Random"><span class="nav-number">2.1.13.</span> <span class="nav-text">产生一个随机数 Random</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.14.</span> <span class="nav-text">数组 定义格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">2.1.15.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">2.1.16.</span> <span class="nav-text">方法的参数传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80"><span class="nav-number">2.2.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">成员变量和局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">2.2.3.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.4.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">2.4.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda"><span class="nav-number">2.5.</span> <span class="nav-text">Lambda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">2.6.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%8C%85"><span class="nav-number">2.6.1.</span> <span class="nav-text">导包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.6.2.</span> <span class="nav-text">修饰符：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">2.7.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81-1"><span class="nav-number">2.7.1.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">2.7.2.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%EF%BC%88interface%EF%BC%89"><span class="nav-number">2.7.3.</span> <span class="nav-text">接口（interface）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%C2%B7%C2%B7%C2%B7"><span class="nav-number">3.</span> <span class="nav-text">连载中···</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-06 19:21:14" itemprop="dateModified" datetime="2022-07-06T19:21:14+08:00">2022-07-06</time>
+      <time title="Modified: 2022-07-07 21:52:35" itemprop="dateModified" datetime="2022-07-07T21:52:35+08:00">2022-07-07</time>
     </span>
 
   
@@ -729,6 +729,118 @@
 <li>枚举的作用<ol>
 <li>选择常量做信息标志和分类：虽然可以实现可读性，但是入参值不受约束，代码相对不严谨</li>
 <li>枚举做信息标志和分类：代码可读性好，入参约束严谨，代码优雅，是最好的信息分类技术，建议使用</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><hr>
+<h3 id="多态-1"><a href="#多态-1" class="headerlink" title="多态"></a>多态</h3><ol>
+<li>多态概述：统一对象在不同时刻表现出来的不同形态</li>
+<li>多态的前提和体现<ol>
+<li>有继承/实现关系</li>
+<li>有方法重写</li>
+<li>有父类（引用/接口）指向（子/实现）类对象<br>例： 动物 animal = new 猫（）；</li>
+</ol>
+</li>
+<li>多态中成员访问特点</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>成员变量</th>
+<th>编译看左边，执行看左边</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>成员方法</td>
+<td>编译看左边，执行看右边</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>多态中的转型<ol>
+<li>向上转型（父类引用指向子类对象）<br>格式：父类名 地址符 =new子类名（）；</li>
+</ol>
+ <strong>注：只能使用父类方法</strong><ol start="2">
+<li>向下转型（父类引用转为子类对象）<br>格式：子类名 地址符=（子类名）父类的地址符</li>
+</ol>
+ <strong>注：可使用子类独有的方法</strong></li>
+<li>多态的形式<br>具体类多态、抽象类多态、接口多态</li>
+</ol>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>·方法抽象类必须抽象，用abstract表示<br>·抽象类中可以有非抽象方法，但抽象方法必须在抽象类中<br><strong>注：抽象类不能实例化指的是不能直接实例化，但可以通过多态的方式实例化</strong></p>
+<h3 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h3><ol>
+<li>格式:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>特点<ol>
+<li>类和接口不能用继承（extends）而是用实现（implements）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 implements 接口名&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>抽象接口不能实例化，但可以像多态一样用实现类对象实现实例化</li>
+</ol>
+</li>
+<li>接口的实现类<ol>
+<li>要么从小接口中的所有抽象方法，要么是抽象类</li>
+<li>接口名+Impl一半为接口的实现类</li>
+</ol>
+</li>
+<li>接口的成员特点<ol>
+<li>接口中的成员变量默认被final修饰，视为常量，无法修改，有默认修饰符public satic final</li>
+<li>接口内没有构造方法</li>
+<li>接口主要是对行为进行抽象</li>
+<li>接口内不能有非抽象方法</li>
+</ol>
+</li>
+<li>类和接口的关系</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类和类的关系</th>
+<th>继承关系，只能单继承，但可以多层继承</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类和接口的关机</td>
+<td>实现关系，（一个类）可以单实现，也可以多实现，还可以在继承一个类的同时实现多个接口</td>
+</tr>
+<tr>
+<td>接口和接口的关系</td>
+<td>继承关系，可以单继承，也可以多继承</td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li><p>抽象类和接口的区别</p>
+<ol>
+<li>成员区别：<br> 抽象类：变量、常量；有构造方法、有抽象方法、有非抽象方法<br> 接口：常量；抽象方法</li>
+<li>关系区别：<br> 类与类：继承，单继承<br> 类与接口：实现，可以单实现，也可以多实现<br> 接口与接口：继承，可以单继承，也可以多继承</li>
+<li>设计理念区别：<br> 抽象类：对类抽象，包括属性，行为（对事物的抽象）<br> 接口：对行为抽象，主要是行为（对行为的抽象）</li>
+</ol>
+</li>
+<li><p>类名作为形参和返回值<br>方法的形参是类名，其实需要的是该类的对象<br>格式：<br>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">本类：public void uesCat（Cat c）&#123;//Cat c=new Cat();</span><br><span class="line">        c.eat();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>测试类：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cat c=new Cat();</span><br><span class="line">   co.useCat(c);</span><br></pre></td></tr></table></figure>
+<p>方法的返回值是类名，其实返回的是该类的对象<br>格式：<br>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">本类：public Cat getCat()&#123;</span><br><span class="line">        Cat c=new Cat();</span><br><span class="line">        return c;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>测试类：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cat c2=co.getCat();//new cat();</span><br><span class="line">    c2.eat();</span><br></pre></td></tr></table></figure></li>
+<li><p>抽象类是方法的形参与返回值</p>
+<ol>
+<li>方法的形参是抽象类名，其实需要的是改抽象类的子类对象<ol>
+<li>做形参：运用多态的方法，创建子类，在测试类中用（例如：Animal a=new Cat()）表示，然后在方法中调用抽象类（格式参考方法的形参是类名）</li>
+</ol>
+</li>
+<li>方法的返回值是抽象类名，其实返回的是该抽象类的子类对象<ol>
+<li>做返回值：运用多态的方法，在本类中用（例如Animal a=new Cat()）表示 然后return（格式参考方法的形参是类名）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>接口名作为形参与返回值</p>
+<ol>
+<li>方法的形参是接口名，其实需要的是该接口的实现类对象<ol>
+<li>做形参：按多态的形式创建实现类（参考抽象类做形参的方式）</li>
+</ol>
+</li>
+<li>方法的返回值是接口名，其实返回的是该接口的实现类对象<ol>
+<li>做返回值：按多态的形式创建实现类（参考抽象类做返回值的方法）</li>
 </ol>
 </li>
 </ol>
