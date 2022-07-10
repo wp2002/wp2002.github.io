@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-10T08:47:16.329Z">
+<meta property="article:modified_time" content="2022-07-10T09:34:40.041Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-10 16:47:16" itemprop="dateModified" datetime="2022-07-10T16:47:16+08:00">2022-07-10</time>
+      <time title="Modified: 2022-07-10 17:34:40" itemprop="dateModified" datetime="2022-07-10T17:34:40+08:00">2022-07-10</time>
     </span>
 
   
@@ -616,8 +616,8 @@
 <td>返回参数绝对值</td>
 </tr>
 <tr>
-<td>￼</td>
 <td>public static double ceil(double a)</td>
+<td>返回大于或等于参数的最小double值，等于一个整数</td>
 </tr>
 <tr>
 <td>public static double floor(double a)</td>
@@ -685,8 +685,7 @@
 <p><strong>找到返回索引，找不到返回-（应该插入位置的索引+1）</strong></p>
 <h3 id="工具类的设计思想"><a href="#工具类的设计思想" class="headerlink" title="工具类的设计思想"></a>工具类的设计思想</h3><p>·构造方法用private修饰<br>·成员用public static修饰</p>
 <h3 id="基本类型包装类"><a href="#基本类型包装类" class="headerlink" title="基本类型包装类"></a>基本类型包装类</h3><ol>
-<li>将基本数据类型封装称对象的好处在于可以在对象中定义更多的功能方法操作该数据<br>常见操作之一：用语基本数据类型与字符串之间的转换</li>
-</ol>
+<li><p>将基本数据类型封装称对象的好处在于可以在对象中定义更多的功能方法操作该数据<br> 常见操作之一：用语基本数据类型与字符串之间的转换</p>
 <table>
 <thead>
 <tr>
@@ -730,15 +729,9 @@
 <td>￼</td>
 <td></td>
 </tr>
-<tr>
-<td>2. Integer类的概述和使用</td>
-<td></td>
-</tr>
-<tr>
-<td>Integer：包装一个对象中原始类型int的值</td>
-<td></td>
-</tr>
 </tbody></table>
+</li>
+<li><p>Integer类的概述和使用<br> Integer：包装一个对象中原始类型int的值</p>
 <table>
 <thead>
 <tr>
@@ -763,7 +756,25 @@
 <td>返回一个保存指定值的Integer对象String</td>
 </tr>
 </tbody></table>
-<p>格式：<br>·Integer i1=Integer.valueOf（）；（用于int）<br>·Integer i2=Integer.valueOf（）；（用语String）<br>3. int和String的相互转换<br>    1. int转String<br>        1. 方式一：<br>        ·int number =100；<br>        ·String s1=“”+number；<br>        2. 方式二：public static String valueOf(int i):<br>        ·String s2=String.valueOf（number）；<br>    2. String转int<br>        1. 方式一：<br>        ·String s=“100”；<br>        ·Integer I=Integer.valueOf（s）；<br>        ·int x=intValue（）；<br>    2. 方式二：public static int parseInt(String s):<br>        ·int y=Integer.parseInt（）；<br>4. split：将一个大字符串分成小字符串</p>
+<p> 格式：<br> ·Integer i1=Integer.valueOf（）；（用于int）<br> ·Integer i2=Integer.valueOf（）；（用语String）</p>
+</li>
+<li><p>int和String的相互转换</p>
+<ol>
+<li>int转String<ol>
+<li>方式一：<br>·int number =100；<br>·String s1=“”+number；</li>
+<li>方式二：public static String valueOf(int i):<br>·String s2=String.valueOf（number）；</li>
+</ol>
+</li>
+<li>String转int<ol>
+<li>方式一：<br>·String s=“100”；<br>·Integer I=Integer.valueOf（s）；<br>·int x=intValue（）；</li>
+</ol>
+</li>
+<li>方式二：public static int parseInt(String s):<br> ·int y=Integer.parseInt（）；</li>
+</ol>
+</li>
+<li><p>split：将一个大字符串分成小字符串</p>
+</li>
+</ol>
 <h3 id="装箱-amp-拆箱"><a href="#装箱-amp-拆箱" class="headerlink" title="装箱&amp;拆箱"></a>装箱&amp;拆箱</h3><p>·装箱；把基本数据类型转换为对应的包装类类型<br>·拆箱：把包装类类型转换为对应的基本数据类型</p>
 <ol>
 <li>装箱<ol>
@@ -779,10 +790,27 @@
 </ol>
 <p><strong>注：在使用包装类类型的时候，如果做操作，最好先判断是否为null</strong><br><strong>推荐：只要是对象，在使用前就你许进行不为null的判断</strong></p>
 <h3 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h3><p>Date代表了一个特定的时间，精确到毫秒</p>
-<p>|方法名|说明|<br>￼|—|—|<br>|public Date()|分配一个Date对象，并初始化，以便它代表它被分配到时间，精确到毫秒|<br>|public Date(Long date)|分配一个Date对象，并将其初始化为表示从标准基准时间起指定的毫秒数|</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Date()</td>
+<td>分配一个Date对象，并初始化，以便它代表它被分配到时间，精确到毫秒</td>
+</tr>
+<tr>
+<td>public Date(Long date)</td>
+<td>分配一个Date对象，并将其初始化为表示从标准基准时间起指定的毫秒数</td>
+</tr>
+</tbody></table>
 <ol>
-<li>步骤：<br> 先导包：<br> ·import java.util.Date;<br> ·Date d1=new Date()<br> ·返回d1为当前时间</li>
-<li>常用方法<br>￼<table>
+<li><p>步骤：<br> 先导包：<br> ·import java.util.Date;<br> ·Date d1=new Date()<br> ·返回d1为当前时间</p>
+</li>
+<li><p>常用方法</p>
+<table>
 <thead>
 <tr>
 <th>方法名</th>
@@ -798,7 +826,7 @@
 <td>设置时间，给的是毫秒值</td>
 </tr>
 <tr>
-<td>getTime（）</td>
+<td>getTime()</td>
 <td>返回与1970.1.1零时距今的毫秒值</td>
 </tr>
 </tbody></table>
@@ -826,8 +854,8 @@
 <td>构造一个 SimpleDateFormat，使用默认模式和日期格式</td>
 </tr>
 <tr>
-<td>￼</td>
 <td>public SimpleDateFormat(String pattern)</td>
+<td>构造一个 SimpleDateFormat使用给定的模式和默认时期格式</td>
 </tr>
 </tbody></table>
 <ol start="4">
@@ -841,9 +869,9 @@
 <li>正则表达式可以用一些规定的自负来制定鬼职责，并用来校验数据格式的合法性。<br>·Split（）：按照正则表达式匹配的内容进行区分，返回一个字符串发数组<br>·replaceAll（String regex，String s）：按照正则表达式匹配的内容进行替换</li>
 <li>matches格式：<br>字符类：</li>
 </ol>
-<p>[abc]指定字符<br>[^abc]除了指定字符外的字符<br>[a-zA-Z]从a(A)到z(Z)包括<br>[a-d[m-p]]从a到d或从m到p<br>[a-z&amp;&amp;[^def]]d,e或m（交集）<br>[a-z&amp;&amp;[^bc]]从a到z，除去b和c<br>[a-z&amp;&amp;[^m-p]]从a到z，除去m到p字符</p>
+<p>[abc] 指定字符<br>[^abc] 除了指定字符外的字符<br>[a-zA-Z] 从a(A)到z(Z)包括<br>[a-d[m-p]] 从a到d或从m到p<br>[a-z&amp;&amp;[^def]] d,e或m（交集）<br>[a-z&amp;&amp;[^bc]] 从a到z，除去b和c<br>[a-z&amp;&amp;[^m-p]] 从a到z，除去m到p字符</p>
 <p>预定义字符：</p>
-<p>.任何字符<br>\d一个数字[0-9]<br>\D非数字[^0-9]<br>\s一个空白字符[\t\n\x0B\f\r]<br>\S非空白字符[^\s]<br>\w英文、数字、下划线[a-zA-Z_0-9]<br>\W一个非单词字符[^\w]</p>
+<p>. 任何字符<br>\d 一个数字[0-9]<br>\D 非数字[^0-9]<br>\s 一个空白字符[\t\n\x0B\f\r]<br>\S 非空白字符[^\s]<br>\w 英文、数字、下划线[a-zA-Z_0-9]<br>\W 一个非单词字符[^\w]</p>
 <p>贪婪量词：</p>
 <p>X? x,一次或无<br>x* x,0次或多次<br>x+ x,一次或多次<br>x{n} x,n次<br>x[n,] x,至少n次<br>x[n,m] x,至少n不超过m</p>
 <p>public boolean matches(String regex):<br>判断是否匹配正则表达式，匹配返回true</p>
