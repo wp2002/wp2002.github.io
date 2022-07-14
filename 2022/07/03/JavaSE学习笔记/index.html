@@ -28,7 +28,7 @@
 <meta property="og:description" content="序 在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠Java官方API文档">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-14T06:49:28.690Z">
+<meta property="article:modified_time" content="2022-07-14T09:49:03.378Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-SE"><span class="nav-number">2.</span> <span class="nav-text">Java SE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">2.1.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%EF%BC%9A%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%80%BC%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">常量：程序运行中值不改变的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%EF%BC%9A%E5%9C%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E5%80%BC%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">变量：在程序运行中可以改变值的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A%EF%BC%9A"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见命名约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.5.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.7.</span> <span class="nav-text">短路逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.1.8.</span> <span class="nav-text">三元运算符：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="nav-number">2.1.9.</span> <span class="nav-text">数据输入：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.10.</span> <span class="nav-text">分支语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.11.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%EF%BC%9A"><span class="nav-number">2.1.12.</span> <span class="nav-text">跳转控制语句：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E4%B8%80%E4%B8%AA%E9%9A%8F%E6%9C%BA%E6%95%B0-Random"><span class="nav-number">2.1.13.</span> <span class="nav-text">产生一个随机数 Random</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.14.</span> <span class="nav-text">数组 定义格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">2.1.15.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">2.1.16.</span> <span class="nav-text">方法的参数传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80"><span class="nav-number">2.2.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">成员变量和局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">2.2.3.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.4.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8API"><span class="nav-number">2.4.</span> <span class="nav-text">常用API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">2.4.1.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math"><span class="nav-number">2.4.2.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System%EF%BC%88%E4%B8%8D%E8%83%BD%E8%A2%AB%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%89"><span class="nav-number">2.4.3.</span> <span class="nav-text">System（不能被实例化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">2.4.4.</span> <span class="nav-text">Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays"><span class="nav-number">2.4.5.</span> <span class="nav-text">Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="nav-number">2.4.6.</span> <span class="nav-text">工具类的设计思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="nav-number">2.4.7.</span> <span class="nav-text">基本类型包装类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E7%AE%B1-amp-%E6%8B%86%E7%AE%B1"><span class="nav-number">2.4.8.</span> <span class="nav-text">装箱&amp;拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date%E7%B1%BB"><span class="nav-number">2.4.9.</span> <span class="nav-text">Date类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SimpleDateFormat"><span class="nav-number">2.4.10.</span> <span class="nav-text">SimpleDateFormat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Calendar"><span class="nav-number">2.4.11.</span> <span class="nav-text">Calendar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BEmatches"><span class="nav-number">2.4.12.</span> <span class="nav-text">正则表达matches</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda"><span class="nav-number">2.6.</span> <span class="nav-text">Lambda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">2.7.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%8C%85"><span class="nav-number">2.7.1.</span> <span class="nav-text">导包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.7.2.</span> <span class="nav-text">修饰符：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">2.8.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">2.8.1.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%EF%BC%88interface%EF%BC%89"><span class="nav-number">2.8.2.</span> <span class="nav-text">接口（interface）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">2.9.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E5%9F%BA%E7%A1%80"><span class="nav-number">2.9.1.</span> <span class="nav-text">集合基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">2.9.2.</span> <span class="nav-text">集合类体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collection%EF%BC%88%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88%EF%BC%89"><span class="nav-number">2.9.2.1.</span> <span class="nav-text">Collection（单列集合）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List"><span class="nav-number">2.9.3.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList%E9%9B%86%E5%90%88%EF%BC%88%E9%93%BE%E8%A1%A8%EF%BC%89"><span class="nav-number">2.9.4.</span> <span class="nav-text">LinkedList集合（链表）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">2.9.5.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set%E9%9B%86%E5%90%88"><span class="nav-number">2.9.6.</span> <span class="nav-text">Set集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%86"><span class="nav-number">2.9.7.</span> <span class="nav-text">区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">2.9.8.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">2.9.9.</span> <span class="nav-text">Collections集合工具类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map%E9%9B%86%E5%90%88"><span class="nav-number">2.9.10.</span> <span class="nav-text">Map集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap%E9%9B%86%E5%90%88%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F"><span class="nav-number">2.9.11.</span> <span class="nav-text">TreeMap集合的自定义排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E9%9B%86%E5%90%88"><span class="nav-number">2.9.12.</span> <span class="nav-text">不可变集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stream%E6%B5%81"><span class="nav-number">2.9.13.</span> <span class="nav-text">Stream流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">2.10.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%BF%97"><span class="nav-number">2.11.</span> <span class="nav-text">日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File%E7%B1%BB"><span class="nav-number">2.12.</span> <span class="nav-text">File类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-number">2.13.</span> <span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-number">2.14.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">2.14.1.</span> <span class="nav-text">字节流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">2.14.2.</span> <span class="nav-text">字符流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81%EF%BC%9A"><span class="nav-number">2.15.</span> <span class="nav-text">缓冲流：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">2.15.1.</span> <span class="nav-text">字节缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">2.15.2.</span> <span class="nav-text">字符缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E6%B5%81%EF%BC%88%E5%A6%82%E5%B0%86UTF-8%E8%BD%AC%E4%B8%BAGBK%EF%BC%89"><span class="nav-number">2.15.3.</span> <span class="nav-text">转换流（如将UTF-8转为GBK）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E6%B5%81%EF%BC%9A"><span class="nav-number">2.16.</span> <span class="nav-text">打印流：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-number">2.17.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%EF%BC%9A"><span class="nav-number">2.17.1.</span> <span class="nav-text">时间格式化：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92"><span class="nav-number">2.17.2.</span> <span class="nav-text">方法递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch-finally"><span class="nav-number">2.17.3.</span> <span class="nav-text">try-catch-finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E4%B8%AD%E6%95%B0%E6%8D%AE%E6%88%AA%E5%8F%96%E5%8A%9F%E8%83%BD"><span class="nav-number">2.17.4.</span> <span class="nav-text">集合中数据截取功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%C2%B7%C2%B7%C2%B7"><span class="nav-number">3.</span> <span class="nav-text">连载中···</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-SE"><span class="nav-number">2.</span> <span class="nav-text">Java SE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">2.1.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%EF%BC%9A%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%80%BC%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">常量：程序运行中值不改变的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%EF%BC%9A%E5%9C%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E5%80%BC%E7%9A%84%E9%87%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">变量：在程序运行中可以改变值的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A%EF%BC%9A"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见命名约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.5.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.7.</span> <span class="nav-text">短路逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.1.8.</span> <span class="nav-text">三元运算符：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="nav-number">2.1.9.</span> <span class="nav-text">数据输入：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.10.</span> <span class="nav-text">分支语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.11.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%EF%BC%9A"><span class="nav-number">2.1.12.</span> <span class="nav-text">跳转控制语句：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E4%B8%80%E4%B8%AA%E9%9A%8F%E6%9C%BA%E6%95%B0-Random"><span class="nav-number">2.1.13.</span> <span class="nav-text">产生一个随机数 Random</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.14.</span> <span class="nav-text">数组 定义格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">2.1.15.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">2.1.16.</span> <span class="nav-text">方法的参数传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80"><span class="nav-number">2.2.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">成员变量和局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">2.2.3.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.4.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8API"><span class="nav-number">2.4.</span> <span class="nav-text">常用API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">2.4.1.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math"><span class="nav-number">2.4.2.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System%EF%BC%88%E4%B8%8D%E8%83%BD%E8%A2%AB%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%89"><span class="nav-number">2.4.3.</span> <span class="nav-text">System（不能被实例化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">2.4.4.</span> <span class="nav-text">Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays"><span class="nav-number">2.4.5.</span> <span class="nav-text">Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="nav-number">2.4.6.</span> <span class="nav-text">工具类的设计思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="nav-number">2.4.7.</span> <span class="nav-text">基本类型包装类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E7%AE%B1-amp-%E6%8B%86%E7%AE%B1"><span class="nav-number">2.4.8.</span> <span class="nav-text">装箱&amp;拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date%E7%B1%BB"><span class="nav-number">2.4.9.</span> <span class="nav-text">Date类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SimpleDateFormat"><span class="nav-number">2.4.10.</span> <span class="nav-text">SimpleDateFormat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Calendar"><span class="nav-number">2.4.11.</span> <span class="nav-text">Calendar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BEmatches"><span class="nav-number">2.4.12.</span> <span class="nav-text">正则表达matches</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda"><span class="nav-number">2.6.</span> <span class="nav-text">Lambda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">2.7.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%8C%85"><span class="nav-number">2.7.1.</span> <span class="nav-text">导包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.7.2.</span> <span class="nav-text">修饰符：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">2.8.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">2.8.1.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%EF%BC%88interface%EF%BC%89"><span class="nav-number">2.8.2.</span> <span class="nav-text">接口（interface）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">2.9.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E5%9F%BA%E7%A1%80"><span class="nav-number">2.9.1.</span> <span class="nav-text">集合基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">2.9.2.</span> <span class="nav-text">集合类体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collection%EF%BC%88%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88%EF%BC%89"><span class="nav-number">2.9.2.1.</span> <span class="nav-text">Collection（单列集合）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List"><span class="nav-number">2.9.3.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList%E9%9B%86%E5%90%88%EF%BC%88%E9%93%BE%E8%A1%A8%EF%BC%89"><span class="nav-number">2.9.4.</span> <span class="nav-text">LinkedList集合（链表）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">2.9.5.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set%E9%9B%86%E5%90%88"><span class="nav-number">2.9.6.</span> <span class="nav-text">Set集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%86"><span class="nav-number">2.9.7.</span> <span class="nav-text">区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">2.9.8.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">2.9.9.</span> <span class="nav-text">Collections集合工具类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map%E9%9B%86%E5%90%88"><span class="nav-number">2.9.10.</span> <span class="nav-text">Map集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap%E9%9B%86%E5%90%88%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F"><span class="nav-number">2.9.11.</span> <span class="nav-text">TreeMap集合的自定义排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E9%9B%86%E5%90%88"><span class="nav-number">2.9.12.</span> <span class="nav-text">不可变集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stream%E6%B5%81"><span class="nav-number">2.9.13.</span> <span class="nav-text">Stream流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">2.10.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%BF%97"><span class="nav-number">2.11.</span> <span class="nav-text">日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File%E7%B1%BB"><span class="nav-number">2.12.</span> <span class="nav-text">File类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-number">2.13.</span> <span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-number">2.14.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">2.14.1.</span> <span class="nav-text">字节流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">2.14.2.</span> <span class="nav-text">字符流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81%EF%BC%9A"><span class="nav-number">2.15.</span> <span class="nav-text">缓冲流：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">2.15.1.</span> <span class="nav-text">字节缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">2.15.2.</span> <span class="nav-text">字符缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E6%B5%81%EF%BC%88%E5%A6%82%E5%B0%86UTF-8%E8%BD%AC%E4%B8%BAGBK%EF%BC%89"><span class="nav-number">2.15.3.</span> <span class="nav-text">转换流（如将UTF-8转为GBK）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E6%B5%81%EF%BC%9A"><span class="nav-number">2.16.</span> <span class="nav-text">打印流：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">2.17.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-number">2.17.1.</span> <span class="nav-text">多线程的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="nav-number">2.17.2.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="nav-number">2.17.3.</span> <span class="nav-text">线程通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="nav-number">2.17.4.</span> <span class="nav-text">线程池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%85%AD%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="nav-number">2.17.5.</span> <span class="nav-text">线程的六种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%EF%BC%8C%E5%B9%B6%E8%A1%8C"><span class="nav-number">2.17.6.</span> <span class="nav-text">并发，并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">2.17.7.</span> <span class="nav-text">线程的生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-number">2.18.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%EF%BC%9A"><span class="nav-number">2.18.1.</span> <span class="nav-text">时间格式化：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92"><span class="nav-number">2.18.2.</span> <span class="nav-text">方法递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch-finally"><span class="nav-number">2.18.3.</span> <span class="nav-text">try-catch-finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E4%B8%AD%E6%95%B0%E6%8D%AE%E6%88%AA%E5%8F%96%E5%8A%9F%E8%83%BD"><span class="nav-number">2.18.4.</span> <span class="nav-text">集合中数据截取功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%C2%B7%C2%B7%C2%B7"><span class="nav-number">3.</span> <span class="nav-text">连载中···</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-14 14:49:28" itemprop="dateModified" datetime="2022-07-14T14:49:28+08:00">2022-07-14</time>
+      <time title="Modified: 2022-07-14 17:49:03" itemprop="dateModified" datetime="2022-07-14T17:49:03+08:00">2022-07-14</time>
     </span>
 
   
@@ -2408,6 +2408,336 @@
 <li>PrintStream和PrintWriter的区别<br> ·打印数据功能上是一摸一样的，收拾使用方便，性能高效<br> ·PrintStream继承自字节输出流OutputStream，支持写字节数据的方法<br> ·PrintWriter继承自字符输出流Writer，支持写字符数据出去</li>
 <li>输出语句重定向<br>·可以吧输出语句打印位置改到文件<br>格式：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PrintStrean pr = new PrintStream(“文件位置“)；</span><br><span class="line">System.setOut(pr);</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><hr>
+<ol>
+<li>概述：多条执行流程</li>
+</ol>
+<h3 id="多线程的创建"><a href="#多线程的创建" class="headerlink" title="多线程的创建"></a>多线程的创建</h3><ol>
+<li><p>方式一：继承Thread类</p>
+<ol>
+<li>实现方法：<ol>
+<li>定义一个子类MyThread继承线线程类java.lang.Thread,重写run()方法</li>
+<li>创建MyThread类的对象</li>
+<li>调用线程对象的start()方法启动线程（启动后还是执行的run方法）</li>
+</ol>
+</li>
+<li>优缺点：<ol>
+<li>优点：编码简单</li>
+<li>缺点：线程类已经继承Thread，无法继承其他类，不利于扩展</li>
+</ol>
+</li>
+<li>Thread的构造器</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Thread(String name)</td>
+<td>可以为当前线程制定名称</td>
+</tr>
+<tr>
+<td>public Thread(Runnable target)</td>
+<td>封装Runnable对象成为线程对象</td>
+</tr>
+<tr>
+<td>public Thread(Runnable target,String name)</td>
+<td>封装Runnable对象成为线程对象，并制定线程名称</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Thread的常用方法</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String getName()</td>
+<td>获取当前线程的名称，默认线程名称是Thread-索引</td>
+</tr>
+<tr>
+<td>void setName()</td>
+<td>设置线程名称</td>
+</tr>
+<tr>
+<td>public static Thread currentThread()</td>
+<td>返回对当前正在执行的线程对象的引用</td>
+</tr>
+<tr>
+<td>public void run()</td>
+<td>线程任务方法</td>
+</tr>
+<tr>
+<td>public void start()</td>
+<td>线程指定方法</td>
+</tr>
+<tr>
+<td>public static void sleep(long time()</td>
+<td>让当前线程休眠指定时间后在继续执行，单位为毫秒</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>方式二：实现Runnable接口</p>
+<ol>
+<li>实现方法：<ol>
+<li>定义一个线程任务类MyRunnable实现Runnable接口，重写run()方法</li>
+<li>创建MyRunnable人物对象  </li>
+<li>把MyRunnable任务对象交给Thread处理</li>
+<li>调用线程对象start()方法启动线程</li>
+</ol>
+</li>
+<li>优缺点：<ol>
+<li>优点：线程任务类只是实现接口，可以继续继承和实现接口，扩展性强</li>
+<li>缺点：编程多一层对象包装，如果线程又执行结构是不可以直接返回的。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>方式三：实现Callable接口（JDK5.0新增）</p>
+<ol>
+<li>实现方法：<ol>
+<li>得到任务对象<ol>
+<li>定义类事项Callable接口，重写call方法，封装要做的事情</li>
+<li>用FutureTask把Callable对象封装成任务对象</li>
+</ol>
+</li>
+<li>把线程任务对象交给Thread处理</li>
+<li>调用Thread的start（）方法启动线程，执行任务</li>
+<li>线程执行完毕后，通过FutureTask的get方法获取任务执行的结果</li>
+</ol>
+</li>
+<li>优缺点：<ol>
+<li>优点：线程任务类只是实现接口，可以继续继承类和实现接口，扩展性强，<strong>可以在线程执行完毕后获取线程的执行的结果</strong></li>
+<li>缺点：编码复杂</li>
+</ol>
+</li>
+<li>FutureTask的API</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public FutureTask&lt;&gt;(Callable call)</td>
+<td>把Callable对象封装成FutureTask对象</td>
+</tr>
+<tr>
+<td>public V get()throws Exception</td>
+<td>获取线程执行call方法返回的结果</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>三种方式的对比</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承THread类</td>
+<td>编程比较简单可以直接使用Thread类中的方法</td>
+<td>扩展性较差，不能再继承其他类，不能返回线程执行的结果</td>
+</tr>
+<tr>
+<td>实现Runnable接口</td>
+<td>扩展性强，实现该接口的同时还可以继承其他类</td>
+<td>编程相对复杂，不能返回线程执行结果</td>
+</tr>
+<tr>
+<td>实现Callable接口</td>
+<td>扩展性强，实现该类接口的同时还可以继承其他的类，可以得到线程执行的结果</td>
+<td>编程相对复杂</td>
+</tr>
+</tbody></table>
+<h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h3><ol>
+<li><p>概述：</p>
+<ol>
+<li>个多线程同时操控一个共享资源的时候可能会出现业务安全问题，称为线程安全问题</li>
+<li>线程同步-&gt;解决线程安全问题</li>
+<li>核心思想：<br> <strong>加锁：把贡献资源进行上锁，每次只能一个线程进入访问完毕后解锁，然后其他线程才能进来<br> 锁是可以跨方法的</strong></li>
+</ol>
+</li>
+<li><p>方式一：同步代码块</p>
+<ol>
+<li>作用：把线程安全问题的核心代码给上锁</li>
+<li>原理：每次只能一个线程进入，执行完毕后自动解锁，其他线程才可以进来执行</li>
+<li>格式：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">synchronized(同步锁对象)&#123;</span><br><span class="line">    操作共享资源的代码(核心代码)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>锁对象要求<ol>
+<li>理论上：锁对象只要对于当前同时执行的线程来说是同一个对象即可</li>
+</ol>
+</li>
+<li>锁对象的规范要求<ol>
+<li>规范上：建议使用贡献资源作为锁对象</li>
+<li>对于实例方法建议使用this作为锁对象</li>
+<li>对于静态方法建议使用字节码（类名.class）对象作为锁对象</li>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public static void run()&#123;</span><br><span class="line">    synchronized(Shiyan.class)&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>方式二：同步方法</p>
+<ol>
+<li>作用：把出现线程安全问题的核心方法给上锁</li>
+<li>原理：每次只能一个线程进入，执行完毕后自动解锁，其他线程才可以进来执行</li>
+<li>格式：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 synchronized 返回值类型 方法名称(形参列表)&#123;</span><br><span class="line">    提供共享资源的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>同步方法底层原理<ol>
+<li>同步方法其实底层也是有隐式锁对象的，只是锁的范围是整个方法代码</li>
+<li>如果方法是实例方法：同步方法默认用this作为锁对象，但是代码要高度面向对象</li>
+<li>如果方法是静态方法：同步方法默认用类名.class作为锁对象</li>
+</ol>
+</li>
+<li>大型并发系统环境中使用Executors如果不注意可能会出现系统风险</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>存在问题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static ExecutorService newFixedThreadPool(int nThreads)</td>
+<td>允许请求的任务队列长度是Integer.MAX_VALUE，可能出现OOM错误（java.lang.OutOfMemoryError)</td>
+</tr>
+<tr>
+<td>public static ExecutorService newSingleThreadExecutor()</td>
+<td>允许请求的任务队列长度是Integer.MAX_VALUE，可能出现OOM错误（java.lang.OutOfMemoryError)</td>
+</tr>
+<tr>
+<td>public static ExecutorService newCachedThreadPool()</td>
+<td>创建的线程数量最大上限是Integer.MAX_VALUE,线程数可能会随着任务1:1增长，也可能出现OOM错误（java.lang.OutOfMemoryError)</td>
+</tr>
+<tr>
+<td>public static ScheduledExecutorService newScheduledExecutorService(int corePoolSize)</td>
+<td>创建的线程数量最大上限是Integer.MAX_VALUE,线程数可能会随着任务1:1增长，也可能出现OOM错误（java.lang.OutOfMemoryError)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>方式三：Lock锁</p>
+<ol>
+<li>为了更清晰的表达如何加锁和释放锁，JDK5以后提供了一个新的锁对象Lock</li>
+<li>Lock实现提供比例使用synchronized方法和语句可以获取更广泛的锁定操作</li>
+<li>Lock是接口不能直接实例化，这里采用它的实现类ReentrantLock来构建Lock锁对象</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public ReentrantLock()</td>
+<td>获得lock锁的实现类对象</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Lock的API</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void lock()</td>
+<td>获得锁</td>
+</tr>
+<tr>
+<td>void unlock()</td>
+<td>释放锁</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>最好用finall调用lock.unlock()方法，防止中途出现bug导致无法解锁以后无法访问</li>
+</ol>
+</li>
+</ol>
+<h3 id="线程通信"><a href="#线程通信" class="headerlink" title="线程通信"></a>线程通信</h3><ol>
+<li>概述：<ol>
+<li>线程通讯就是线程间相互发送数据，线程通讯通常共享一个数据的方式实现</li>
+<li>线程间会根据共享数据的情况决定自己该怎么做，以及通知其他线程该怎么做</li>
+</ol>
+</li>
+<li>常见的线程通讯模型<ol>
+<li>生产者鱼消费者模型：生产者负责生出数据，消费者负责消费数据</li>
+<li>要求：生产者线程生产完数据后，唤醒消费者，然后等待自己；消费者消费完数据后，唤醒生产者，然后等待自己</li>
+<li>注：<br> <strong>1. sleep状态不需要强锁，一但醒来直接运行</strong><br> <strong>2. wait：时间到了或被唤醒并抢到锁才能运行</strong></li>
+</ol>
+</li>
+<li>等待和唤醒方法</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void wait()</td>
+<td>让当前线程等待并释放所占锁，直到另一个线程调用notify()方法或notifyAll()方法</td>
+</tr>
+<tr>
+<td>void notify()</td>
+<td>唤醒正在等待的单个线程</td>
+</tr>
+<tr>
+<td>void notifyAll()</td>
+<td>唤醒正在等待的所有线程</td>
+</tr>
+</tbody></table>
+<h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3><h3 id="线程的六种状态"><a href="#线程的六种状态" class="headerlink" title="线程的六种状态"></a>线程的六种状态</h3><table>
+<thead>
+<tr>
+<th>线程状态</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NEW（新建）</td>
+<td>线程刚被创建，但是并未启动</td>
+</tr>
+<tr>
+<td>Runnable（可运行）</td>
+<td>线程已经调用了start（）等待CPU调度</td>
+</tr>
+<tr>
+<td>Blocked（锁阻塞）</td>
+<td>线程在执行的时候未竞争到锁对象，则该线程进入Blocked状态</td>
+</tr>
+<tr>
+<td>Waiting（无限等待）</td>
+<td>一个线程进入Waiting状态，另一个线程调用notify或者notifiAll方法才能唤醒</td>
+</tr>
+<tr>
+<td>TimedWaiting（计时等待）</td>
+<td>同waiting状态，有几个方法超市参数，调用它们将进入TimedWaiting状态，带有超时参数的常用方法有Thread.sleep、Object.wait</td>
+</tr>
+<tr>
+<td>Teminated（被终止）</td>
+<td>因为run方法正常退出而死亡或因为没有捕获的异常终止了run方法而死亡</td>
+</tr>
+</tbody></table>
+<h3 id="并发，并行"><a href="#并发，并行" class="headerlink" title="并发，并行"></a>并发，并行</h3><p>·正在运行的程序（软件）就是一个独立的进程，线程是数亿进程的，多个线程就是并发与并行同时进行的<br>·并发的理解：cpu分时轮询的执行线程<br>·cpu同时处理线程的数量是有限的<br>·cpu会轮询为系统的每个线程服务，由于cpu切换的速度很快，给我们的感觉这些线程在同时执行，这就是并发<br>·并行的理解：同一时刻同时在执行<br>·在同一时刻是那个，同时有多个线程在被cpu处理并执行 </p>
+<h3 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h3><p>线程的状态：也就是线程从生到死的过程，以及中间经历的各种状态及状态转换</p>
 <h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><hr>
 <h3 id="时间格式化："><a href="#时间格式化：" class="headerlink" title="时间格式化："></a>时间格式化：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SimpleDateFormat(“yyyy/MM/dd  HH:mm:ss”).format(time);</span><br></pre></td></tr></table></figure>
 <h3 id="方法递归"><a href="#方法递归" class="headerlink" title="方法递归"></a>方法递归</h3><ol>
