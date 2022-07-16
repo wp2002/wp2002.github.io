@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://wp2002.github.io/img/javase-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-BS%E5%BC%80%E5%8F%91-2.png">
 <meta property="og:image" content="https://wp2002.github.io/img/javase-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E3%80%81%E5%8F%8D%E5%B0%84%E3%80%81%E6%B3%A8%E8%A7%A3%E3%80%81%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86-%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86-1.png">
 <meta property="article:published_time" content="2022-07-03T13:28:13.000Z">
-<meta property="article:modified_time" content="2022-07-16T06:23:24.572Z">
+<meta property="article:modified_time" content="2022-07-16T07:55:39.720Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-16 14:23:24" itemprop="dateModified" datetime="2022-07-16T14:23:24+08:00">2022-07-16</time>
+      <time title="Modified: 2022-07-16 15:55:39" itemprop="dateModified" datetime="2022-07-16T15:55:39+08:00">2022-07-16</time>
     </span>
 
   
@@ -3464,10 +3464,116 @@
 </li>
 </ol>
 <h3 id="XML解析技术"><a href="#XML解析技术" class="headerlink" title="XML解析技术"></a>XML解析技术</h3><ol>
-<li>概述：使用程序读取XML中的数据</li>
-<li>两种解析方式<ol>
-<li>SAX解析：读一行解析一行</li>
-<li>DOM解析：一次性读完</li>
+<li><p>概述：使用程序读取XML中的数据</p>
+</li>
+<li><p>两种解析方式</p>
+<ol>
+<li><p>SAX解析：读一行解析一行</p>
+</li>
+<li><p>DOM解析：一次性读完</p>
+<ol>
+<li><p>Dom常见的解析工具</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JAXP</td>
+<td>SUN公司提供的一套XML的解析API</td>
+</tr>
+<tr>
+<td>JDOM</td>
+<td>JDOM是一个开源项目，它基于树型结构，利用纯Java的技术对XML文档实现解析、生成、序列化以及多种操作</td>
+</tr>
+<tr>
+<td>dom4j</td>
+<td>是JDOM的成绩产品，用来读写XML文档，具有性能优异、功能强大和极易使用的特点，它的性能超过SUN公司官方的dom技术，同时它也是一个开放源代码的软件，Hibrnate也用它来读写配置文件</td>
+</tr>
+<tr>
+<td>jsoup</td>
+<td>功能强大DOM方式的XML解析开发包，尤其对HTML解析更加方便</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Dom4j解析XML-得到Document对象</p>
+<ol>
+<li><p>SAXReader类</p>
+<table>
+<thead>
+<tr>
+<th>构造器/方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public SAXReader()</td>
+<td>创建Dom4j的解析器对象</td>
+</tr>
+<tr>
+<td>Document read(String url)</td>
+<td>加载XML文件成为Document对象</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Document类</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Element getRootElement()</td>
+<td>获取根元素对象</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li><p>Dom4j解析XML的元素，属性，文本</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>List<Element> elements()</td>
+<td>得到当前元素下所有子元素</td>
+</tr>
+<tr>
+<td>List<Element> elements(String name)</td>
+<td>得到当前元素下指定名字的子元素返回集合</td>
+</tr>
+<tr>
+<td>Element element(String name)</td>
+<td>得到当前元素下指定名字的子元素，如果有很多名字相同的返回第一个</td>
+</tr>
+<tr>
+<td>String getName()</td>
+<td>得到元素名字</td>
+</tr>
+<tr>
+<td>String attributeValue(String name)</td>
+<td>通过属性名直接得到属性值</td>
+</tr>
+<tr>
+<td>String elementText(子元素名)</td>
+<td>得到指定名称的子元素的文本</td>
+</tr>
+<tr>
+<td>String getText()</td>
+<td>得到文本</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
