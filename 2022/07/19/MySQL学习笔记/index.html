@@ -27,11 +27,14 @@
 <meta property="og:site_name" content="wp2002.blog">
 <meta property="og:description" content="序 MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL是最流行的关系型数据库管理系统之一,MySQL是一种关系型数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言。现在通过运用blog记录的方式对平时的学习">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wp2002.github.io/img/MySQP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80-SQL%E8%AF%AD%E8%A8%80-DQL-%E7%BC%96%E5%86%99%E9%A1%BA%E5%BA%8F.png">
+<meta property="og:image" content="https://wp2002.github.io/img/MySQP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80-SQL%E8%AF%AD%E8%A8%80-DQL-%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png">
 <meta property="article:published_time" content="2022-07-19T06:48:23.000Z">
-<meta property="article:modified_time" content="2022-07-24T03:33:49.685Z">
+<meta property="article:modified_time" content="2022-07-24T14:54:04.455Z">
 <meta property="article:author" content="wp2002">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wp2002.github.io/img/MySQP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80-SQL%E8%AF%AD%E8%A8%80-DQL-%E7%BC%96%E5%86%99%E9%A1%BA%E5%BA%8F.png">
 
 
 <link rel="canonical" href="https://wp2002.github.io/2022/07/19/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -116,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E6%A6%82%E8%BF%B0"><span class="nav-number">2.1.</span> <span class="nav-text">MySQL概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">SQL语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDL"><span class="nav-number">2.2.2.</span> <span class="nav-text">DDL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DML"><span class="nav-number">2.2.3.</span> <span class="nav-text">DML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL"><span class="nav-number">2.2.4.</span> <span class="nav-text">DQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DCL"><span class="nav-number">2.2.5.</span> <span class="nav-text">DCL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">3.</span> <span class="nav-text">进阶</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E7%BB%B4"><span class="nav-number">4.</span> <span class="nav-text">运维</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%E2%80%A6"><span class="nav-number">5.</span> <span class="nav-text">连载中…</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E6%A6%82%E8%BF%B0"><span class="nav-number">2.1.</span> <span class="nav-text">MySQL概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">SQL语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDL"><span class="nav-number">2.2.2.</span> <span class="nav-text">DDL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DML"><span class="nav-number">2.2.3.</span> <span class="nav-text">DML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL"><span class="nav-number">2.2.4.</span> <span class="nav-text">DQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DCL"><span class="nav-number">2.2.5.</span> <span class="nav-text">DCL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.1.</span> <span class="nav-text">聚合函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">3.</span> <span class="nav-text">进阶</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E7%BB%B4"><span class="nav-number">4.</span> <span class="nav-text">运维</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E8%BD%BD%E4%B8%AD%E2%80%A6"><span class="nav-number">5.</span> <span class="nav-text">连载中…</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -217,7 +220,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-24 11:33:49" itemprop="dateModified" datetime="2022-07-24T11:33:49+08:00">2022-07-24</time>
+      <time title="Modified: 2022-07-24 22:54:04" itemprop="dateModified" datetime="2022-07-24T22:54:04+08:00">2022-07-24</time>
     </span>
 
   
@@ -555,7 +558,173 @@
 <li><p>删除数据<br><code>DELETE FROM 表名[WHERE 条件];</code><br> <strong>注：DELETE语句的条件可以有，也可以没有，如果没有条件，则会删除整张表的所有数据<br> 注：DELETE语句不能删除某一个字段的值(可以使用UPDATE)</strong></p>
 </li>
 </ol>
-<h3 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h3><h3 id="DCL"><a href="#DCL" class="headerlink" title="DCL"></a>DCL</h3><h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><hr>
+<h3 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h3><ol>
+<li>编写顺序<br><img src="/img/MySQP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80-SQL%E8%AF%AD%E8%A8%80-DQL-%E7%BC%96%E5%86%99%E9%A1%BA%E5%BA%8F.png" alt="MySQP学习笔记-基础-SQL语言-DQL-编写顺序"></li>
+<li>基本查询<ol>
+<li>查询多个字段<br><code>SELECT 字段1,字段2,字段3...FROM 表名;</code><br><code>SELECT*FROM 表名;</code></li>
+<li>设置别名<br><code>SELECT 字段1[AS 别名1]，字段2[AS 别名2]...FROM 表名;</code></li>
+<li>去除重复记录<br><code>SELECT DISTINCT 字段列表 FROM 表名;</code></li>
+</ol>
+</li>
+<li>条件查询<ol>
+<li>语法<br><code>SELECT 字段列表 FROM 表名 WHERE 条件类表;</code></li>
+<li>条件<table>
+<thead>
+<tr>
+<th>比较运算符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;或!=</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>DETWEEN…AND…</td>
+<td>在某个范围之内（含最小、最大值</td>
+</tr>
+<tr>
+<td>IN(…)</td>
+<td>在in之后的列表中的值，多选一</td>
+</tr>
+<tr>
+<td>LIKE 占位符</td>
+<td>模糊匹配（_匹配单个字符，%匹配任意个字符)</td>
+</tr>
+<tr>
+<td>IS NULL</td>
+<td>是NULL</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>逻辑运算符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AND 或 &amp;&amp;</td>
+<td>并且(多个条件同时成立)</td>
+</tr>
+<tr>
+<td>OR 或 ｜｜</td>
+<td>或者(多个条件任意一个成立)</td>
+</tr>
+<tr>
+<td>NOT 或!</td>
+<td>非、不是</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>分组查询<ol>
+<li>语法<br><code>SELECT 字段列表 FROM [WHERE 条件] GROUP BY 分组字段名[HAVING 分组后过滤条件];</code></li>
+<li>where和having区别<ol>
+<li>执行时机不同：where是在分组之前进行过滤，不满足where条件的不参与分组；having是分组之后对结果进行过滤</li>
+<li>判断条件不同：where不能对聚合函数进行判断，而having可以</li>
+</ol>
+</li>
+</ol>
+ <strong>注：执行顺序：where&gt;聚合函数&gt;having</strong><br> **注：分组之后，查询的字段一般为聚合函数和分组字段，查询其他字段无意义</li>
+<li>排序查询<ol>
+<li>语法<br><code>SELECT 字段列表 FROM 表名 ORDER BY 字段1 排序方式1,字段2 排序方式2;</code></li>
+<li>排序方式<ol>
+<li>ASC：升序(默认值)</li>
+<li>DESC:降序</li>
+</ol>
+</li>
+</ol>
+ <strong>注：如果是多字段排序，当第一个字段值相同时，才会根据第二个字段进行排序</strong></li>
+<li>分页查询<ol>
+<li>语法<br><code>SELECT 字段列表 FROM 表名 LIMIT 起始索引,查询记录数;</code></li>
+</ol>
+ *<em>注：起始索引从0开始，起始索引=(查询页码-1)<em>每页显示记录数</em></em><br> <strong>注：分页查询是数据库的方言，不同的数据库有不同的实现，MySQL中是LIMIT</strong><br> <strong>注：如果查询的是第一页数据，起始索引可以省略，直接简写为limit10</strong></li>
+<li>执行顺序<br><img src="/img/MySQP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80-SQL%E8%AF%AD%E8%A8%80-DQL-%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png" alt="MySQP学习笔记-基础-SQL语言-DQL-执行顺序"></li>
+</ol>
+<h3 id="DCL"><a href="#DCL" class="headerlink" title="DCL"></a>DCL</h3><ol>
+<li><p>管理用户</p>
+<ol>
+<li>查询用户<br><code>USE mysql;</code><br><code>SELECT * FROM user;</code></li>
+<li>创建用户<br><code>CREATE USER &#39;用户名&#39;@&#39;主机名&#39; IDENTIFIED BY &#39;密码&#39;;</code></li>
+<li>修改用户密码<br><code>ALTER USER &#39;用户名&#39;@&#39;主机名&#39; IDENTIFIED WITH mysql_native_password BY &#39;新密码&#39;;</code></li>
+<li>删除用户<br><code>DROP UESR &#39;用户名&#39;@&#39;主机名&#39;;</code></li>
+</ol>
+<p> <strong>注：主机名可以使用%通配</strong><br> <strong>注：这类SQL开发人员操作的比较少，主要是DBA（Database Administrator 数据库管理员）使用</strong></p>
+</li>
+<li><p>权限控制</p>
+<ol>
+<li>常用权限<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ALL,ALL PRIVILEGES</td>
+<td>所有权限</td>
+</tr>
+<tr>
+<td>SELECT</td>
+<td>查询数据</td>
+</tr>
+<tr>
+<td>INSERT</td>
+<td>插入数据</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>修改数据</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除数据</td>
+</tr>
+<tr>
+<td>ALTER</td>
+<td>修改表</td>
+</tr>
+<tr>
+<td>DROP</td>
+<td>删除数据库/表/视图</td>
+</tr>
+<tr>
+<td>CREATE</td>
+<td>创建数据库/表</td>
+</tr>
+</tbody></table>
+</li>
+<li>查询权限<br><code>SHOW GRANTS FOR &#39;用户名&#39;@&#39;主机名&#39;;</code></li>
+<li>授予权限<br><code>GRANT 权限列表 ON 数据库名.表名 TO &#39;用户名&#39;@&#39;主机名&#39;;</code></li>
+<li>撤销权限<br><code>REVOKE 权限列表 ON 数据库名.表名 FROM &#39;用户名&#39;@&#39;主机名&#39;;</code></li>
+</ol>
+<p> <strong>注：多个权限直接，使用逗号分隔</strong><br> <strong>注：授权时，数据库名和表名可以使用*进行通配，代表所有</strong></p>
+</li>
+</ol>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><hr>
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><hr>
 <h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><hr>
 <h1 id="连载中…"><a href="#连载中…" class="headerlink" title="连载中…"></a>连载中…</h1>
     </div>
