@@ -20,23 +20,79 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wp2002.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"归档","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="wp2002.blog">
-<meta property="og:url" content="https://wp2002.github.io/index.html">
+    <meta name="description" content="自学部分：一、操作系统概述计算机由硬件和软件组成操作系统是软件的一类，主要作用是协助用户调度硬件工作，充当用户和计算机硬件之间的桥梁图形化：使用系统提供的图形化页面，以获得图形化反馈的形式去使用操作系统命令行：使用操作系统提供的各种命令，以获得字符反馈的形式去使用操作系统 FinalShell下载地址：https:&#x2F;&#x2F;www.hostbuf.com注意：如果虚拟机重启IP地址可能会发生变化，需要重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux学习笔记">
+<meta property="og:url" content="https://wp2002.github.io/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="wp2002.blog">
+<meta property="og:description" content="自学部分：一、操作系统概述计算机由硬件和软件组成操作系统是软件的一类，主要作用是协助用户调度硬件工作，充当用户和计算机硬件之间的桥梁图形化：使用系统提供的图形化页面，以获得图形化反馈的形式去使用操作系统命令行：使用操作系统提供的各种命令，以获得字符反馈的形式去使用操作系统 FinalShell下载地址：https:&#x2F;&#x2F;www.hostbuf.com注意：如果虚拟机重启IP地址可能会发生变化，需要重">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1679981853833-2f101740-d288-4583-878f-620b3f8b68e9.png#averageHue=%23fefcfa&clientId=u1f0feb9a-2db7-4&from=ui&id=u027bffb0&originHeight=904&originWidth=1196&originalType=binary&ratio=2&rotation=0&showTitle=false&size=243200&status=done&style=none&taskId=ueba9d8ba-5888-47cf-91b2-b1613cff9da&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685251869849-ddf82e9e-ed6e-446e-8435-43b153566e5a.png#averageHue=%23fcfbfa&clientId=u0d259272-43b4-4&from=drop&id=ube88cea7&originHeight=1034&originWidth=1242&originalType=binary&ratio=2&rotation=0&showTitle=false&size=319221&status=done&style=none&taskId=u2446842c-4100-49e9-a4f2-615a6b4e812&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685251884253-5c709e97-ff18-4428-8918-767c8cb5f929.png#averageHue=%23fdfbfa&clientId=u0d259272-43b4-4&from=drop&id=u460741cc&originHeight=954&originWidth=1318&originalType=binary&ratio=2&rotation=0&showTitle=false&size=135281&status=done&style=none&taskId=ub49d8013-8ec1-4e5e-b3d8-bc3ad91fbad&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252218093-552200de-a21f-4723-b650-9dd71bf20584.png#averageHue=%23fdfdfd&clientId=u0d259272-43b4-4&from=drop&id=ue783ab16&originHeight=1040&originWidth=1354&originalType=binary&ratio=2&rotation=0&showTitle=false&size=182566&status=done&style=none&taskId=ud648536b-7926-421d-af49-7967e82e638&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252232445-9ba768a4-3d4f-478c-8750-b8833a330ffa.png#averageHue=%2390c48b&clientId=u0d259272-43b4-4&from=drop&id=uc5afcb6e&originHeight=916&originWidth=1334&originalType=binary&ratio=2&rotation=0&showTitle=false&size=284060&status=done&style=none&taskId=u1c734ff1-e224-4a57-9831-464d2131525&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252240478-86298916-8ed4-4dca-8f78-1aae03c5953d.png#averageHue=%23fdfcfb&clientId=u0d259272-43b4-4&from=drop&id=u349cd159&originHeight=1004&originWidth=1154&originalType=binary&ratio=2&rotation=0&showTitle=false&size=183532&status=done&style=none&taskId=u0a8ecda3-65ab-4e28-b979-444aef22558&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252251830-54898093-2bd9-4680-8c57-11bd51b85d30.png#averageHue=%237abc3c&clientId=u0d259272-43b4-4&from=drop&id=ud888152c&originHeight=922&originWidth=1290&originalType=binary&ratio=2&rotation=0&showTitle=false&size=184059&status=done&style=none&taskId=u5edc2d23-fb57-44da-8ef6-1a433955fda&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252259640-43e9e9f3-1cda-4f61-8ddd-b1fb97ac4484.png#averageHue=%23faf9f9&clientId=u0d259272-43b4-4&from=drop&id=uf2100289&originHeight=1006&originWidth=1078&originalType=binary&ratio=2&rotation=0&showTitle=false&size=154127&status=done&style=none&taskId=u587c53d6-5c13-4565-8a80-d9241735d97&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252462356-4675286c-8166-4df7-b01b-5c3678a9885f.png#averageHue=%23fefefe&clientId=u0d259272-43b4-4&from=drop&id=u6ecaad81&originHeight=818&originWidth=1096&originalType=binary&ratio=2&rotation=0&showTitle=false&size=87383&status=done&style=none&taskId=u5bae3472-84c0-4a65-bc97-5bc24febe50&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252483941-6bfe5b37-5431-40e0-845c-e60c9653b6ba.png#averageHue=%23fdfdfc&clientId=u0d259272-43b4-4&from=drop&id=u0b0e60ca&originHeight=932&originWidth=1338&originalType=binary&ratio=2&rotation=0&showTitle=false&size=139989&status=done&style=none&taskId=u58196eb6-833c-4128-b17a-d45fb2db5be&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252539894-6cf153ae-03b5-407c-91c1-47919b4c8cc9.png#averageHue=%23fdfdfd&clientId=u0d259272-43b4-4&from=drop&id=udac1e7ff&originHeight=872&originWidth=1310&originalType=binary&ratio=2&rotation=0&showTitle=false&size=156601&status=done&style=none&taskId=u4d9fc696-e170-460f-9969-5e29f8cb1e1&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252555852-343db4ef-9ecb-45ca-9abb-618040f862c5.png#averageHue=%2395b6cc&clientId=u0d259272-43b4-4&from=drop&id=ua535d4ef&originHeight=960&originWidth=1160&originalType=binary&ratio=2&rotation=0&showTitle=false&size=244932&status=done&style=none&taskId=u254ab10b-7dff-4975-88dd-98c8c94e9a0&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252873137-cd1b334a-eb06-464c-921e-184a44144b31.png#averageHue=%23fbfbfb&clientId=u0d259272-43b4-4&from=drop&id=u55a2d8ea&originHeight=892&originWidth=1074&originalType=binary&ratio=2&rotation=0&showTitle=false&size=110361&status=done&style=none&taskId=u5238bb88-5d8a-443e-bd6f-d399a38921c&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685252881183-06eadc9d-1c2e-456c-8bb0-af13f58d21c6.png#averageHue=%237bc838&clientId=u0d259272-43b4-4&from=drop&id=u1dfec142&originHeight=830&originWidth=1348&originalType=binary&ratio=2&rotation=0&showTitle=false&size=52747&status=done&style=none&taskId=u7a2a2914-2e50-41a1-896e-1b9c5c68ef0&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253215469-a5287f82-f6ea-4f09-bb77-42fc2583844a.png#averageHue=%23a8bf79&clientId=u0d259272-43b4-4&from=drop&id=ue2a60a37&originHeight=946&originWidth=1238&originalType=binary&ratio=2&rotation=0&showTitle=false&size=303951&status=done&style=none&taskId=u4cfcdfa7-371c-4244-8c05-c298fd4332f&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253295964-2ae57e46-e121-470a-bd68-aa2d53b1d0f7.png#averageHue=%23c1c1f3&clientId=u0d259272-43b4-4&from=drop&id=u6a2352a8&originHeight=936&originWidth=1246&originalType=binary&ratio=2&rotation=0&showTitle=false&size=160585&status=done&style=none&taskId=ub095b4b8-3e4d-49d3-817a-5279d79a221&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253647994-7ae293bf-6fad-4b27-bb2d-e9d78295e258.png#averageHue=%23ffdece&clientId=u0d259272-43b4-4&from=drop&id=u4e72f41d&originHeight=1008&originWidth=1296&originalType=binary&ratio=2&rotation=0&showTitle=false&size=270889&status=done&style=none&taskId=u5b25891a-3802-4b73-a011-9922c10346a&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253656578-d117f667-543e-41a1-bd27-2356cc7c5040.png#averageHue=%23fbfbfb&clientId=u0d259272-43b4-4&from=drop&id=ufeb3c57e&originHeight=922&originWidth=1230&originalType=binary&ratio=2&rotation=0&showTitle=false&size=115085&status=done&style=none&taskId=u1352fa78-acd0-4ec0-b4d6-6f6f76e4436&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253708779-2c707095-f97e-4896-8060-ee6a986f06ae.png#averageHue=%23bdbdf3&clientId=u0d259272-43b4-4&from=drop&id=ufe0902d2&originHeight=972&originWidth=1200&originalType=binary&ratio=2&rotation=0&showTitle=false&size=140623&status=done&style=none&taskId=ubee3f409-72fd-4fb6-a1f8-1e5a66eb485&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253724027-a00d74ca-8465-4349-a4a7-eba41343cb2a.png#averageHue=%23f7f7f6&clientId=u0d259272-43b4-4&from=drop&id=u67ed734e&originHeight=1008&originWidth=1066&originalType=binary&ratio=2&rotation=0&showTitle=false&size=154985&status=done&style=none&taskId=u15e2d164-b3c3-4c72-9087-472d33d4407&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685253731040-7930f462-e270-462b-a527-b0c06d9311bb.png#averageHue=%23afa26a&clientId=u0d259272-43b4-4&from=drop&id=u2bd7c0d2&originHeight=714&originWidth=1262&originalType=binary&ratio=2&rotation=0&showTitle=false&size=218384&status=done&style=none&taskId=u8f7e3a48-eb71-42c3-9203-d461ba4ff91&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685257534292-b41f64d1-b159-45f1-ba95-7049df9c7090.png#averageHue=%23edeaea&clientId=u0d259272-43b4-4&from=drop&id=ubf794888&originHeight=978&originWidth=1310&originalType=binary&ratio=2&rotation=0&showTitle=false&size=587901&status=done&style=none&taskId=u1f84bea9-1446-49a8-90f6-6cc31b84239&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685260581939-8b8480da-6261-48d9-b702-97d7e6b95e37.png#averageHue=%2374913f&clientId=u0d259272-43b4-4&from=drop&id=u5dfb5077&originHeight=982&originWidth=1358&originalType=binary&ratio=2&rotation=0&showTitle=false&size=685166&status=done&style=none&taskId=u4b25c217-5426-48cc-9466-814f379bc56&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685266181928-d76b5869-a582-4d56-9dc0-2a278787645a.png#averageHue=%23fdfdfa&clientId=u0d259272-43b4-4&from=drop&id=uf6459178&originHeight=1002&originWidth=1236&originalType=binary&ratio=2&rotation=0&showTitle=false&size=477317&status=done&style=none&taskId=u7418c3ab-4572-4345-bb58-386024c2062&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685271646519-22a246cb-6f5c-4772-b6fc-4a0dbd09e7df.png#averageHue=%23f7d7cb&clientId=u0d259272-43b4-4&from=drop&id=u713166f5&originHeight=138&originWidth=748&originalType=binary&ratio=2&rotation=0&showTitle=false&size=25193&status=done&style=none&taskId=ua19f9fd8-2240-4060-a931-26a8909ec53&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272730103-77243b0c-1372-42d4-a473-ad80f75d56e9.png#averageHue=%23f9ebe4&clientId=u0d259272-43b4-4&from=drop&id=uf6127da5&originHeight=262&originWidth=1166&originalType=binary&ratio=2&rotation=0&showTitle=false&size=50340&status=done&style=none&taskId=u59d77d68-cbfd-4ace-9aa8-83bead8c1dd&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272764814-efa4070f-e389-432e-9e8d-5c8c276e609a.png#averageHue=%23f9f5f3&clientId=u0d259272-43b4-4&from=drop&id=u5936cd8d&originHeight=524&originWidth=1312&originalType=binary&ratio=2&rotation=0&showTitle=false&size=204891&status=done&style=none&taskId=u080874f5-3c93-4d3d-8f55-2c89e21b58b&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272780554-3351ccb1-49e0-4dc2-8b8d-3f6673683ef4.png#averageHue=%23fdfcfc&clientId=u0d259272-43b4-4&from=drop&id=u5ce8f166&originHeight=1000&originWidth=1162&originalType=binary&ratio=2&rotation=0&showTitle=false&size=328424&status=done&style=none&taskId=u997c69ac-b01b-4bbe-8453-59d5aa344d5&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272789814-f3676105-ad51-42d9-8785-aff55dbbf458.png#averageHue=%23fdfdfd&clientId=u0d259272-43b4-4&from=drop&id=ud420a274&originHeight=782&originWidth=1310&originalType=binary&ratio=2&rotation=0&showTitle=false&size=250696&status=done&style=none&taskId=u1f3f4235-dc46-4964-84c2-ab369a334c4&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272802138-8125d8ca-0f02-47a8-a2d8-1cdafc8a7aab.png#averageHue=%23fdf9f8&clientId=u0d259272-43b4-4&from=drop&id=ub4c9569e&originHeight=924&originWidth=1318&originalType=binary&ratio=2&rotation=0&showTitle=false&size=322637&status=done&style=none&taskId=uaa4034c0-edd1-400b-b5f2-b328fd26e67&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685272995139-d9ea12f7-4970-45da-8ba9-77da940f5c78.png#averageHue=%23efe7e3&clientId=u0d259272-43b4-4&from=drop&id=uc31446ba&originHeight=176&originWidth=1374&originalType=binary&ratio=2&rotation=0&showTitle=false&size=58914&status=done&style=none&taskId=ua3ac3aab-32e1-48d2-872c-76f4ddc1772&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685273423191-c795b5d7-9601-45a2-998c-babee2a643c3.png#averageHue=%23fdfcfc&clientId=u0d259272-43b4-4&from=drop&id=ucc4fd8cf&originHeight=1000&originWidth=1156&originalType=binary&ratio=2&rotation=0&showTitle=false&size=333781&status=done&style=none&taskId=u7069d53b-68c2-4965-a33d-92112ea2d9e&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685273439184-a40cd10f-5c1d-42b8-bc10-c8c023c5261a.png#averageHue=%23fdfdfb&clientId=u0d259272-43b4-4&from=drop&id=u1f740c2a&originHeight=868&originWidth=1328&originalType=binary&ratio=2&rotation=0&showTitle=false&size=271385&status=done&style=none&taskId=u41f5f1c4-5f87-4c80-96dc-4bd56e13744&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685277912104-7a947f2b-8637-4746-a7c4-3c8cab875065.png#averageHue=%23fcfbfb&clientId=u0d259272-43b4-4&from=drop&id=ud348f273&originHeight=968&originWidth=1314&originalType=binary&ratio=2&rotation=0&showTitle=false&size=315289&status=done&style=none&taskId=u3be46fd0-2488-4afb-a0b7-efb68030c74&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685277933425-03ee5f7c-c3fa-4e99-84c1-d4fc3b6e36c0.png#averageHue=%237bc95d&clientId=u0d259272-43b4-4&from=drop&id=uca3160eb&originHeight=1012&originWidth=1356&originalType=binary&ratio=2&rotation=0&showTitle=false&size=701602&status=done&style=none&taskId=u09ee003b-6649-4c0f-858b-6cb56477339&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278236471-f43a1804-9cf5-4159-a0ac-f81fe1b42cf6.png#averageHue=%238ab061&clientId=u0d259272-43b4-4&from=drop&id=u6c520154&originHeight=994&originWidth=1336&originalType=binary&ratio=2&rotation=0&showTitle=false&size=816050&status=done&style=none&taskId=u25aeacac-7d89-4a86-8d2d-f823c57cf5d&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278273680-aa72a553-e328-41b4-be1f-2c22b737c140.png#averageHue=%23fcfbfa&clientId=u0d259272-43b4-4&from=drop&id=u24ba6cf0&originHeight=966&originWidth=1312&originalType=binary&ratio=2&rotation=0&showTitle=false&size=518910&status=done&style=none&taskId=u1e28bc62-3075-454d-bfb9-39bdbc3cd59&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278291109-7baa8b61-ee10-4b84-bf46-8a18d4a1ad32.png#averageHue=%2394a9bc&clientId=u0d259272-43b4-4&from=drop&id=u992c66d9&originHeight=618&originWidth=1326&originalType=binary&ratio=2&rotation=0&showTitle=false&size=640128&status=done&style=none&taskId=u19c16c3b-5924-4646-90c1-843c59263e2&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685279947218-cdf4065a-f382-4695-ab16-a84b456b999f.png#averageHue=%2393c695&clientId=u60c39470-ea7d-4&from=drop&id=oqGtY&originHeight=778&originWidth=1184&originalType=binary&ratio=2&rotation=0&showTitle=false&size=135807&status=done&style=none&taskId=u5965446d-fd69-4374-959f-3ea4b137304&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685280000402-9a8f3391-879c-4d4f-bee7-1d3b3a4bda47.png#averageHue=%2390c394&clientId=u60c39470-ea7d-4&from=drop&id=kCApk&originHeight=792&originWidth=1226&originalType=binary&ratio=2&rotation=0&showTitle=false&size=164930&status=done&style=none&taskId=ub9ea50ec-bfb9-4b8f-bf18-78bdb9ddea7&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281104591-9fc59290-2ff4-4612-bb5b-9669dab15c9a.png#averageHue=%23f0dccb&clientId=u60c39470-ea7d-4&from=drop&id=u927335d4&originHeight=958&originWidth=1346&originalType=binary&ratio=2&rotation=0&showTitle=false&size=380758&status=done&style=none&taskId=ue460b175-2af7-427a-b144-6bc81c82197&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281127252-d0a87c79-3e79-423a-80a3-1c8e41ecf418.png#averageHue=%23fdfcfc&clientId=u60c39470-ea7d-4&from=drop&id=u3a76ee84&originHeight=1006&originWidth=1296&originalType=binary&ratio=2&rotation=0&showTitle=false&size=372339&status=done&style=none&taskId=u2f6289dc-20fc-41f0-9a87-4d8d37aa0f6&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281146625-57a81d60-3464-4a29-b36f-704cafedf8a7.png#averageHue=%2392ae65&clientId=u60c39470-ea7d-4&from=drop&id=u5be9d493&originHeight=954&originWidth=1344&originalType=binary&ratio=2&rotation=0&showTitle=false&size=826861&status=done&style=none&taskId=u30f84c7d-80a1-446a-a807-e54d2543b7b&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281165890-e1abe264-49b6-4c43-bdf4-405e760352c5.png#averageHue=%238aa759&clientId=u60c39470-ea7d-4&from=drop&id=u4c2d4497&originHeight=848&originWidth=1338&originalType=binary&ratio=2&rotation=0&showTitle=false&size=697622&status=done&style=none&taskId=uc6421fa6-400a-4c97-8d7a-8065cb449c0&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281498357-65c74201-66a8-47f4-bd88-81b304d4e856.png#averageHue=%23fdfcfc&clientId=u60c39470-ea7d-4&from=drop&id=u4fae1173&originHeight=1000&originWidth=1132&originalType=binary&ratio=2&rotation=0&showTitle=false&size=329058&status=done&style=none&taskId=uf0238e3f-7536-41da-9537-2e490aedeca&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685281521333-8bd6f07c-34c8-4004-8d51-a0e10a6d0942.png#averageHue=%2371943c&clientId=u60c39470-ea7d-4&from=drop&id=u5182f50f&originHeight=706&originWidth=1298&originalType=binary&ratio=2&rotation=0&showTitle=false&size=421166&status=done&style=none&taskId=u191e4512-8343-495e-aecc-1e7a793ac9d&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278607495-e2e8f1cd-1335-4a87-ae2d-5441f5114584.png#averageHue=%23eed4c2&clientId=u0d259272-43b4-4&from=drop&id=u1d28864c&originHeight=958&originWidth=1332&originalType=binary&ratio=2&rotation=0&showTitle=false&size=409873&status=done&style=none&taskId=u0e415e71-9f16-4293-b2e4-6e680484559&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278625354-b39a9165-c802-4154-b835-cb8c60e1605d.png#averageHue=%23fdf9f2&clientId=u0d259272-43b4-4&from=drop&id=ud746e3a4&originHeight=924&originWidth=1290&originalType=binary&ratio=2&rotation=0&showTitle=false&size=347179&status=done&style=none&taskId=u7f1323e5-249e-44c7-9840-1913995001c&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278637617-e2834cc9-db2f-4513-a450-c1291761a8a2.png#averageHue=%23fdf9ea&clientId=u0d259272-43b4-4&from=drop&id=u200e412d&originHeight=986&originWidth=1310&originalType=binary&ratio=2&rotation=0&showTitle=false&size=378873&status=done&style=none&taskId=u410139c7-a768-4bbb-ba9d-b93dba3d403&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278646195-01f08964-8561-4044-948f-897f7b95df06.png#averageHue=%235d6094&clientId=u0d259272-43b4-4&from=drop&id=ucc796d02&originHeight=846&originWidth=1346&originalType=binary&ratio=2&rotation=0&showTitle=false&size=841291&status=done&style=none&taskId=ufa8917ad-fc56-43c8-a222-7afc8f629ea&title=">
+<meta property="article:published_time" content="2023-05-28T13:53:23.000Z">
+<meta property="article:modified_time" content="2023-05-28T13:53:41.994Z">
 <meta property="article:author" content="wp2002">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/34704016/1679981853833-2f101740-d288-4583-878f-620b3f8b68e9.png#averageHue=%23fefcfa&clientId=u1f0feb9a-2db7-4&from=ui&id=u027bffb0&originHeight=904&originWidth=1196&originalType=binary&ratio=2&rotation=0&showTitle=false&size=243200&status=done&style=none&taskId=ueba9d8ba-5888-47cf-91b2-b1613cff9da&title=">
 
 
-<link rel="canonical" href="https://wp2002.github.io/">
+<link rel="canonical" href="https://wp2002.github.io/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://wp2002.github.io/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2023/05/28/Linux学习笔记/","title":"linux学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>wp2002.blog</title>
+<title>linux学习笔记 | wp2002.blog</title>
   
 
 
@@ -66,7 +122,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">wp2002.blog</h1>
+      <p class="site-title">wp2002.blog</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -98,7 +154,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -111,6 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">自学部分：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">一、操作系统概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">二、Linux基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%9A%E7%94%A8%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">（1）命令的通用格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89ls%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">（2）ls命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E7%9B%AE%E5%BD%95%E5%88%87%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、目录切换命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-cd%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%E7%9B%AE%E5%BD%95"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">(1)cd命令可以更改目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-pwd%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">(2)pwd命令：打印当前工作目录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.2.4.</span> <span class="nav-text">4、相对路径和绝对路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.5.</span> <span class="nav-text">5、目录创建命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">6、文件操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89touch%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">（1）touch命令：创建文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89cat%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-%E5%B0%86%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%85%A8%E9%83%A8%E6%98%BE%E7%A4%BA%E5%87%BA%E6%9D%A5"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">（2）cat命令：查看文件内容,将文件内容全部显示出来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89more%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%EF%BC%8Cmore%E6%94%AF%E6%8C%81%E7%BF%BB%E9%A1%B5%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%B8%80%E9%A1%B5%E9%A1%B5%E7%9A%84%E5%B1%95%E7%A4%BA"><span class="nav-number">1.2.6.3.</span> <span class="nav-text">（3）more命令：查看文件内容，more支持翻页，可以一页页的展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89cp%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.6.4.</span> <span class="nav-text">（4）cp命令：复制文件、文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%885%EF%BC%89mv%E5%91%BD%E4%BB%A4%EF%BC%9A%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.6.5.</span> <span class="nav-text">（5）mv命令：移动文件、文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%886%EF%BC%89rm%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.6.6.</span> <span class="nav-text">（6）rm命令：删除文件、文件夹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.7.</span> <span class="nav-text">7、查找命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89which%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%9F%A5%E7%9C%8B%E6%89%80%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E7%B3%BB%E5%88%97%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6%E5%AD%98%E6%94%BE%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="nav-number">1.2.7.1.</span> <span class="nav-text">（1）which命令：查看所使用的一系列命令的程序文件存放在哪里</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89find%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%8C%89%E6%96%87%E4%BB%B6%E5%90%8D%E6%9F%A5%E6%89%BE%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.7.2.</span> <span class="nav-text">（2）find命令：按文件名查找指定文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89find%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%8C%89%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.7.3.</span> <span class="nav-text">（3）find命令：按文件大小查找文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81grep%E3%80%81wc%E5%92%8C%E7%AE%A1%E9%81%93%E7%AC%A6"><span class="nav-number">1.2.8.</span> <span class="nav-text">8、grep、wc和管道符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89grep%E5%91%BD%E4%BB%A4%EF%BC%9A%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E9%80%9A%E8%BF%87%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E6%96%87%E4%BB%B6%E8%A1%8C"><span class="nav-number">1.2.8.1.</span> <span class="nav-text">（1）grep命令：从文件中通过关键字过滤文件行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89wc%E5%91%BD%E4%BB%A4%EF%BC%9A%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0%E3%80%81%E5%8D%95%E8%AF%8D%E6%95%B0%E9%87%8F%E7%AD%89"><span class="nav-number">1.2.8.2.</span> <span class="nav-text">（2）wc命令：统计文件的行数、单词数量等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E7%AE%A1%E9%81%93%E7%AC%A6%EF%BC%9A%E2%80%9C%EF%BD%9C%E2%80%9D%EF%BC%9A%E5%B0%86%E7%AE%A1%E9%81%93%E5%B7%A6%E8%BE%B9%E5%91%BD%E4%BB%A4%E7%9A%84%E7%BB%93%E6%9E%9C%E4%BD%9C%E4%B8%BA%E5%8F%B3%E8%BE%B9%E5%91%BD%E4%BB%A4%E7%9A%84%E8%BE%93%E5%85%A5%EF%BC%88%E5%8F%AF%E5%B5%8C%E5%A5%97%EF%BC%89"><span class="nav-number">1.2.8.3.</span> <span class="nav-text">（3）管道符：“｜”：将管道左边命令的结果作为右边命令的输入（可嵌套）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9%E3%80%81echo%E3%80%81tail%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91%E7%AC%A6"><span class="nav-number">1.2.9.</span> <span class="nav-text">9、echo、tail和重定向符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89echo%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%87%BA%E7%9F%A5%E9%81%93%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.9.1.</span> <span class="nav-text">（1）echo命令：在命令行输出知道内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%8F%8D%E5%BC%95%E5%8F%B7%E2%80%9C%E2%80%9D%EF%BC%9A%E8%A2%AB%E2%80%9C%E2%80%9D%E5%8C%85%E5%9B%B4%E7%9A%84%E5%86%85%E5%AE%B9%E4%BC%9A%E8%A2%AB%E4%BD%9C%E4%B8%BA%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%EF%BC%8C%E8%80%8C%E9%9D%9E%E4%B8%8D%E5%90%8C%E5%AD%97%E6%AE%B5"><span class="nav-number">1.2.9.2.</span> <span class="nav-text">（2）反引号“”：被“”包围的内容会被作为命令执行，而非不同字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E9%87%8D%E5%AE%9A%E5%90%91%E7%AC%A6%E2%80%9C-gt-%E2%80%9D%E5%92%8C%E2%80%9C-gt-gt-%E2%80%9D%EF%BC%9A"><span class="nav-number">1.2.9.3.</span> <span class="nav-text">（3）重定向符“&gt;”和“&gt;&gt;”：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89tail%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%B0%BE%E9%83%A8%E5%86%85%E5%AE%B9%EF%BC%8C%E8%B7%9F%E8%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E6%96%B0%E6%9B%B4%E6%94%B9"><span class="nav-number">1.2.9.4.</span> <span class="nav-text">（4）tail命令：可以查看文件尾部内容，跟踪文件的最新更改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10%E3%80%81vi-vim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">1.2.10.</span> <span class="nav-text">10、vi\vim编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A"><span class="nav-number">1.2.10.1.</span> <span class="nav-text">快捷键：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Linux%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90"><span class="nav-number">1.3.</span> <span class="nav-text">三、Linux用户和权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81root%E7%94%A8%E6%88%B7%EF%BC%88%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98%EF%BC%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、root用户（超级管理员）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-su%E5%92%8Cexit%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">(1)su和exit命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-sudo%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%8F%AF%E4%BB%A5%E4%B8%BA%E6%99%AE%E9%80%9A%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%B4%E6%97%B6%E4%BB%A5root%E8%BA%AB%E4%BB%BD%E6%89%A7%E8%A1%8C"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">(2)sudo命令：可以为普通的命令临时以root身份执行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E7%94%A8%E6%88%B7%EF%BC%8C%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、用户，用户组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89Linux%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%9D%83%E9%99%90%E7%9A%84%E7%AE%A1%E6%8E%A7%E5%88%86%E4%B8%BA%E9%92%88%E5%AF%B9%E7%94%A8%E6%88%B7%E7%9A%84%E6%9D%83%E9%99%90%E7%AE%A1%E6%8E%A7%E5%92%8C%E9%92%88%E5%AF%B9%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E6%9D%83%E9%99%90%E7%AE%A1%E6%8E%A7"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">（1）Linux系统对权限的管控分为针对用户的权限管控和针对用户组的权限管控</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86%EF%BC%88%E7%94%A8root%E7%94%A8%E6%88%B7%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">（2）用户组管理（用root用户执行）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%EF%BC%88%E7%94%A8root%E7%94%A8%E6%88%B7%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">（3）用户管理（用root用户执行）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89getent%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">（4）getent命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、查看权限控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6-chmod%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">（1）修改权限控制-chmod命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6-chown%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">（2）修改权限控制-chown命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">1.4.</span> <span class="nav-text">四、Linux实用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">1.4.1.</span> <span class="nav-text">1、快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.4.2.</span> <span class="nav-text">2、软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89yum%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">（1）yum命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89apt%E5%91%BD%E4%BB%A4%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%EF%BC%89"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">（2）apt命令（适用于Ubuntu）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81systemctl"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">3、systemctl</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">学校课程：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9ALinux%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">2.1.</span> <span class="nav-text">第一章：Linux系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UNIX%E7%B3%BB%E7%BB%9F%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.1.</span> <span class="nav-text">UNIX系统特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E5%90%88"><span class="nav-number">2.1.2.</span> <span class="nav-text">适用场合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.3.</span> <span class="nav-text">Linux系统的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux%E5%BA%94%E7%94%A8%E5%9C%BA%E5%90%88"><span class="nav-number">2.1.4.</span> <span class="nav-text">Linux应用场合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ALinux-Shell%E5%9F%BA%E7%A1%80"><span class="nav-number">2.2.</span> <span class="nav-text">第二章：Linux Shell基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shell"><span class="nav-number">2.2.1.</span> <span class="nav-text">shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">shell的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.3.</span> <span class="nav-text">linux常用的简单命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%B3%A8%E9%94%80%E3%80%81%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.4.</span> <span class="nav-text">系统注销、关机、重启命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E9%94%80-%E9%80%80%E5%87%BA%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">注销&#x2F;退出系统：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E6%9C%BA%EF%BC%88shutdown-hale%E5%91%BD%E4%BB%A4%EF%BC%89%EF%BC%9A"><span class="nav-number">2.2.4.2.</span> <span class="nav-text">关机（shutdown&#x2F;hale命令）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%90%AF%EF%BC%88shutdown-reboot%E5%91%BD%E4%BB%A4%EF%BC%89%EF%BC%9A"><span class="nav-number">2.2.4.3.</span> <span class="nav-text">重启（shutdown&#x2F;reboot命令）：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86"><span class="nav-number">2.2.5.</span> <span class="nav-text">目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">2.2.5.1.</span> <span class="nav-text">目录结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">2.2.5.2.</span> <span class="nav-text">常用目录：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">2.2.5.3.</span> <span class="nav-text">特殊目录：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">2.2.5.4.</span> <span class="nav-text">常用的文件操作命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="nav-number">2.2.5.5.</span> <span class="nav-text">文件类型：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A"><span class="nav-number">2.2.5.6.</span> <span class="nav-text">特殊文件名：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%EF%BC%9A"><span class="nav-number">2.2.5.7.</span> <span class="nav-text">通配符：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="nav-number">2.2.6.</span> <span class="nav-text">文件权限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux%E6%96%87%E4%BB%B6%E7%9A%84%E5%AD%98%E5%8F%96%E6%9D%83%E9%99%90"><span class="nav-number">2.2.6.1.</span> <span class="nav-text">Linux文件的存取权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%AD%98%E5%8F%96%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.6.2.</span> <span class="nav-text">用户存取文件类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%91%BD%E4%BB%A4chmod%EF%BC%9A"><span class="nav-number">2.2.6.3.</span> <span class="nav-text">权限修改命令chmod：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85%EF%BC%88%E5%BF%85%E9%A1%BB%E5%AF%B9%E6%96%87%E4%BB%B6%E7%94%B1write%E6%9D%83%E9%99%90%E6%89%8D%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E6%8B%A5%E6%9C%89%E8%80%85%EF%BC%89"><span class="nav-number">2.2.6.4.</span> <span class="nav-text">改变文件所有者（必须对文件由write权限才可以改变拥有者）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E6%89%80%E5%9C%A8%E7%BB%84%EF%BC%88%E5%BF%85%E9%A1%BB%E6%98%AF%E6%96%87%E4%BB%B6%E7%9A%84%E6%8B%A5%E6%9C%89%E8%80%85%E6%88%96%E8%80%85supervisor%E6%89%8D%E8%83%BD%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E7%BB%84%E5%88%AB%E7%9A%84%E5%BD%92%E5%B1%9E%EF%BC%89"><span class="nav-number">2.2.6.5.</span> <span class="nav-text">改变文件所在组（必须是文件的拥有者或者supervisor才能改变文件组别的归属）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.6.6.</span> <span class="nav-text">文件管理常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find%E5%91%BD%E4%BB%A4%EF%BC%9A%E5%9C%A8%E5%88%B6%E5%AE%9A%E7%9B%AE%E5%BD%95%E5%8F%8A%E5%85%B6%E5%AD%90%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%9F%A5%E6%89%BE%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.6.7.</span> <span class="nav-text">find命令：在制定目录及其子目录下查找符合条件的特定文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.2.6.7.1.</span> <span class="nav-text">查找条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%8C%89%E7%BB%99%E5%AE%9A%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%9F%A5%E6%89%BE%E4%BF%A1%E6%81%AF"><span class="nav-number">2.2.6.8.</span> <span class="nav-text">grep命令：按给定的模式在文件中查找信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cmp%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E8%8B%A5%E5%86%85%E5%AE%B9%E4%B8%8D%E5%90%8C%E6%98%BE%E7%A4%BA%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">2.2.6.9.</span> <span class="nav-text">cmp命令：比较两个文件的内容，若内容不同显示两个文件第一次数据不同的位置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.7.</span> <span class="nav-text">其他常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%BD%BF%E7%94%A8%E4%BF%A1%E6%81%AF"><span class="nav-number">2.2.7.1.</span> <span class="nav-text">查看文件系统的磁盘空间使用信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%A1%E9%81%93%EF%BC%88%EF%BD%9C%EF%BC%89%EF%BC%9A%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E7%AE%A1%E9%81%93%E5%90%A7%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E7%9A%84%E8%BE%93%E5%87%BA%E4%BC%A0%E9%80%92%E7%BB%99%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E4%BD%9C%E4%B8%BA%E8%BE%93%E5%85%A5%E3%80%82"><span class="nav-number">2.2.7.2.</span> <span class="nav-text">管道（｜）：可以通过管道吧一个命令的输出传递给另一个命令作为输入。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#awk%EF%BC%88%E5%91%BD%E4%BB%A4%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%89%EF%BC%9A%E6%8A%8A%E6%96%87%E4%BB%B6%E6%88%96%E5%91%BD%E4%BB%A4%E7%9A%84%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C%E9%80%90%E8%A1%8C%E8%AF%BB%E5%85%A5%EF%BC%8C%E4%BB%A5%E7%A9%BA%E6%A0%BC%E4%B8%BA%E5%8D%95%E4%BD%8D%E8%BF%9B%E8%A1%8C%E5%88%86%E5%89%B2%EF%BC%8C%E6%8C%89%E6%9D%A1%E4%BB%B6%E6%8F%90%E5%8F%96%E6%89%80%E9%9C%80%E5%86%85%E5%AE%B9"><span class="nav-number">2.2.7.3.</span> <span class="nav-text">awk（命令信息提取）：把文件或命令的执行结果逐行读入，以空格为单位进行分割，按条件提取所需内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wc%EF%BC%88%E7%BB%9F%E8%AE%A1%E5%91%BD%E4%BB%A4%EF%BC%89%EF%BC%9A%E7%BB%9F%E8%AE%A1%E5%88%B6%E5%AE%9A%E6%96%87%E4%BB%B6%E6%88%96%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E4%B8%AD%E7%9A%84%E5%AD%97%E8%8A%82%E6%95%B0%E3%80%81%E5%AD%97%E6%95%B0%E6%88%96%E8%A1%8C%E6%95%B0%EF%BC%8C%E5%B9%B6%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.7.4.</span> <span class="nav-text">wc（统计命令）：统计制定文件或命令输出结果中的字节数、字数或行数，并数据统计结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#file%EF%BC%88%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%EF%BC%89"><span class="nav-number">2.2.7.5.</span> <span class="nav-text">file（判断文件类型）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tee%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%8A%8A%E8%BE%93%E5%87%BA%E7%9A%84%E7%BB%93%E6%9E%9C%E4%BF%9D%E5%AD%98%E5%88%B0%E6%96%87%E4%BB%B6%E9%87%8C%EF%BC%8C%E4%B9%9F%E6%98%BE%E7%A4%BA%E5%88%B0%E5%B1%8F%E5%B9%95%E4%B8%8A"><span class="nav-number">2.2.7.6.</span> <span class="nav-text">tee命令：把输出的结果保存到文件里，也显示到屏幕上</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell%E5%91%BD%E4%BB%A4%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.8.</span> <span class="nav-text">shell命令输入与输出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#echo%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA%E4%BF%A1%E6%81%AF"><span class="nav-number">2.2.8.1.</span> <span class="nav-text">echo命令输出信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">2.2.8.2.</span> <span class="nav-text">cat命令显示文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#read%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E4%BB%8E%E9%94%AE%E7%9B%98%E4%B8%AD%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E8%B5%8B%E7%BB%99%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.8.3.</span> <span class="nav-text">read命令可以从键盘中读入数据，并将其赋给一个变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">2.2.8.4.</span> <span class="nav-text">输入&#x2F;输出重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88-gt-%E5%92%8C-gt-gt-%EF%BC%89"><span class="nav-number">2.2.8.4.1.</span> <span class="nav-text">输出重定向（&gt;和&gt;&gt;）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88-lt-%E5%92%8C-lt-lt-%EF%BC%89"><span class="nav-number">2.2.8.4.2.</span> <span class="nav-text">输入重定向（&lt;和&lt;&lt;）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%8E%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E6%9C%89%E5%85%B3%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">2.2.8.4.3.</span> <span class="nav-text">与文件描述有关的重定向</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.2.8.5.</span> <span class="nav-text">命令执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#amp-amp-%EF%BC%9A"><span class="nav-number">2.2.8.5.1.</span> <span class="nav-text">&amp;&amp;：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%9A"><span class="nav-number">2.2.8.5.2.</span> <span class="nav-text">||：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%9A-1"><span class="nav-number">2.2.8.5.3.</span> <span class="nav-text">()：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.2.8.6.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-%E6%8E%A7%E5%88%B6%E5%8C%B9%E9%85%8D%E5%AD%97%E7%AC%A6%E8%BF%9E%E7%BB%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0"><span class="nav-number">2.2.8.6.1.</span> <span class="nav-text">使用{}控制匹配字符连续出现的次数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tr%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%9B%BF%E6%8D%A2%E6%88%96%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.8.7.</span> <span class="nav-text">tr命令：替换或删除字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tr%E4%B8%AD%E7%89%B9%E5%AE%9A%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.8.7.1.</span> <span class="nav-text">tr中特定控制字符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.2.8.7.2.</span> <span class="nav-text">字符转换</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9ALinux-Shell%E7%BC%96%E7%A8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">第三章：Linux Shell编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell%E8%84%9A%E6%9C%AC%E6%A6%82%E8%BF%B0"><span class="nav-number">2.3.1.</span> <span class="nav-text">Shell脚本概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E5%86%99shell%E8%84%9A%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">编写shell脚本格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8Cshell%E8%84%9A%E6%9C%AC"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">执行shell脚本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.</span> <span class="nav-text">shell变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">本地变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.1.1.</span> <span class="nav-text">定义变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.1.2.</span> <span class="nav-text">显示变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E5%8F%98%E9%87%8F%E5%80%BC"><span class="nav-number">2.3.2.1.3.</span> <span class="nav-text">清除变量值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E8%BE%93%E5%87%BA%E5%8F%98%E9%87%8F%E5%80%BC%EF%BC%88%E5%A4%9A%E4%B8%AA%E5%8F%98%E9%87%8F%E5%B9%B6%E6%8E%92%E8%BE%93%E5%87%BA%EF%BC%89"><span class="nav-number">2.3.2.1.4.</span> <span class="nav-text">合并输出变量值（多个变量并排输出）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.2.1.</span> <span class="nav-text">系统常用的环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.2.2.</span> <span class="nav-text">用户自定义环境变量</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.3.</span> <span class="nav-text">位置参数变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%8F%98%E9%87%8F"><span class="nav-number">2.3.2.4.</span> <span class="nav-text">特殊变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.2.5.</span> <span class="nav-text">替换命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97"><span class="nav-number">2.3.3.</span> <span class="nav-text">算数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.3.3.1.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#expr-%E9%80%9A%E7%94%A8%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%A1%E7%AE%97%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.3.2.</span> <span class="nav-text">expr-通用的表达式计算命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97"><span class="nav-number">2.3.3.3.</span> <span class="nav-text">浮点运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#printf%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.3.4.</span> <span class="nav-text">printf命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95"><span class="nav-number">2.3.4.</span> <span class="nav-text">条件测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95"><span class="nav-number">2.3.4.1.</span> <span class="nav-text">文件测试</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.3.4.1.1.</span> <span class="nav-text">文件测试条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%8B%E8%AF%95"><span class="nav-number">2.3.4.2.</span> <span class="nav-text">字符串测试</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.3.4.2.1.</span> <span class="nav-text">字符串测试条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E6%B5%8B%E8%AF%95"><span class="nav-number">2.3.4.3.</span> <span class="nav-text">数值测试</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.3.4.3.1.</span> <span class="nav-text">数值测试条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6%E9%80%9A%E5%B8%B8%E7%94%A8%E5%9C%A8%E8%84%9A%E6%9C%AC%E9%87%8C%EF%BC%8C%E7%BB%93%E5%90%88if%E5%92%8Cwhile%E8%BF%99%E6%A0%B7%E7%9A%84%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%9C%EF%BC%8C%E6%A0%B9%E6%8D%AE%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%EF%BC%8C%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E5%90%91%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">2.3.4.4.</span> <span class="nav-text">测试条件通常用在脚本里，结合if和while这样的控制结果，根据测试条件的返回值，控制程序的流向，执行不同的功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.5.</span> <span class="nav-text">控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.5.1.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#case%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.5.2.</span> <span class="nav-text">case语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.3.5.3.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.3.5.4.</span> <span class="nav-text">while循环</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8while%E5%BE%AA%E7%8E%AF%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">2.3.5.4.1.</span> <span class="nav-text">用while循环从文件中读取数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#while%E5%BE%AA%E7%8E%AF%E5%AF%B9%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E7%9A%84%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E5%A4%84%E7%90%86"><span class="nav-number">2.3.5.4.2.</span> <span class="nav-text">while循环对文件中读取的内容进行处理</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A-Linux-C%E7%BC%96%E7%A8%8B"><span class="nav-number">2.4.</span> <span class="nav-text">第四章： Linux C编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-C%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">2.4.1.</span> <span class="nav-text">Linux C程序开发环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%BE%8B%EF%BC%88%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%8A%E6%98%BE%E7%A4%BA%E2%80%9Chelloworld%EF%BC%81%E2%80%9D%EF%BC%89"><span class="nav-number">2.4.2.</span> <span class="nav-text">程序设计实例（在屏幕上显示“helloworld！”）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">2.4.3.</span> <span class="nav-text">文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">文件的系统调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E5%92%8C%E5%BA%93%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.3.1.1.</span> <span class="nav-text">关于系统调用和库函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="nav-number">2.4.3.1.2.</span> <span class="nav-text">系统提供的常用的文件系统调用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-creat"><span class="nav-number">2.4.3.1.3.</span> <span class="nav-text">系统调用 creat</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%82%E6%95%B0mode%E8%AF%B4%E6%98%8E"><span class="nav-number">2.4.3.1.3.1.</span> <span class="nav-text">参数mode说明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="nav-number">2.4.3.1.3.2.</span> <span class="nav-text">文件描述符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E6%8F%8F%E6%97%B6%E7%AC%A6%E5%8F%8A%E5%AE%83%E4%BB%AC%E9%80%9A%E5%B8%B8%E6%89%80%E5%AF%B9%E5%BA%94%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A"><span class="nav-number">2.4.3.1.3.3.</span> <span class="nav-text">常用的文件描时符及它们通常所对应的文件名：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#creat-%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.4.3.1.3.4.</span> <span class="nav-text">creat()实例            </span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-open"><span class="nav-number">2.4.3.1.4.</span> <span class="nav-text">系统调用 open</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#oflag%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-number">2.4.3.1.4.1.</span> <span class="nav-text">oflag参数说明：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%82%E6%95%B0mode%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-number">2.4.3.1.4.2.</span> <span class="nav-text">参数mode说明：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-read"><span class="nav-number">2.4.3.1.5.</span> <span class="nav-text">系统调用 read</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-write"><span class="nav-number">2.4.3.1.6.</span> <span class="nav-text">系统调用 write</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-lseek"><span class="nav-number">2.4.3.1.7.</span> <span class="nav-text">系统调用 lseek</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A9%BA%E6%B4%9E%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.3.1.7.1.</span> <span class="nav-text">空洞文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A9%BA%E6%B4%9E%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.4.3.1.7.2.</span> <span class="nav-text">空洞文件的作用</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-close"><span class="nav-number">2.4.3.1.8.</span> <span class="nav-text">系统调用 close</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-mkdir"><span class="nav-number">2.4.3.1.9.</span> <span class="nav-text">系统调用 mkdir</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-truncate"><span class="nav-number">2.4.3.1.10.</span> <span class="nav-text">系统调用 truncate</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-link%E3%80%81symlink%E3%80%81unlink"><span class="nav-number">2.4.3.1.11.</span> <span class="nav-text">系统调用 link、symlink、unlink</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A1%AC%E9%93%BE%E6%8E%A5"><span class="nav-number">2.4.3.1.11.1.</span> <span class="nav-text">硬链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5"><span class="nav-number">2.4.3.1.11.2.</span> <span class="nav-text">符号链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-link"><span class="nav-number">2.4.3.1.11.3.</span> <span class="nav-text">系统调用 link</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-symlink"><span class="nav-number">2.4.3.1.11.4.</span> <span class="nav-text">系统调用 symlink</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8link%E5%92%8Csymlink%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.4.3.1.11.5.</span> <span class="nav-text">系统调用link和symlink实例</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-unlink"><span class="nav-number">2.4.3.1.11.6.</span> <span class="nav-text">系统调用 unlink</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-stat"><span class="nav-number">2.4.3.1.12.</span> <span class="nav-text">系统调用 stat</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#stat%E7%BB%93%E6%9E%84%E4%BD%93%E5%8F%8A%E6%88%90%E5%91%98"><span class="nav-number">2.4.3.1.12.1.</span> <span class="nav-text">stat结构体及成员</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,16 +221,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://wp2002.github.io/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -187,13 +245,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wp2002.blog">
+      <meta itemprop="name" content="linux学习笔记 | wp2002.blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">linux学习笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          linux学习笔记
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -217,7 +275,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="自学部分："><a href="#自学部分：" class="headerlink" title="自学部分："></a>自学部分：</h1><h2 id="一、操作系统概述"><a href="#一、操作系统概述" class="headerlink" title="一、操作系统概述"></a>一、操作系统概述</h2><p>计算机由硬件和软件组成<br>操作系统是软件的一类，主要作用是协助用户调度硬件工作，充当用户和计算机硬件之间的桥梁<br>图形化：使用系统提供的图形化页面，以获得图形化反馈的形式去使用操作系统<br>命令行：使用操作系统提供的各种命令，以获得字符反馈的形式去使用操作系统</p>
+        <h1 id="自学部分："><a href="#自学部分：" class="headerlink" title="自学部分："></a>自学部分：</h1><h2 id="一、操作系统概述"><a href="#一、操作系统概述" class="headerlink" title="一、操作系统概述"></a>一、操作系统概述</h2><p>计算机由硬件和软件组成<br>操作系统是软件的一类，主要作用是协助用户调度硬件工作，充当用户和计算机硬件之间的桥梁<br>图形化：使用系统提供的图形化页面，以获得图形化反馈的形式去使用操作系统<br>命令行：使用操作系统提供的各种命令，以获得字符反馈的形式去使用操作系统</p>
 <p>FinalShell<br>下载地址：<a target="_blank" rel="noopener" href="https://www.hostbuf.com/">https://www.hostbuf.com</a><br>注意：如果虚拟机重启IP地址可能会发生变化，需要重新设置IP地址（或设置固定IP地址）<br>通过该软件可以在主机上对虚拟机终端进行操作</p>
 <p>虚拟机快照（VMware）<br>对虚拟机进行快照，当虚拟机出现问题后可以用之前的快照进行恢复，从而恢复到之前快照时的状态<br>注意：快照最好关闭虚拟机进行，否则制作快照过程会很慢</p>
 <h2 id="二、Linux基础命令"><a href="#二、Linux基础命令" class="headerlink" title="二、Linux基础命令"></a>二、Linux基础命令</h2><h3 id="1、目录结构"><a href="#1、目录结构" class="headerlink" title="1、目录结构"></a>1、目录结构</h3><p>Linux系统的目录结构是一个树型结构，没有盘符概念，只有一个根目录/，所有文件都在它下面<br>“/”出现在开头，表示根目录，“/”出现在语句中，表示层次关系</p>
@@ -1576,7 +1634,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">struct stat&#123;</span><br><span class="line">dev_t     st_dev;     /*文件对于的设备号*/</span><br><span class="line">ino_t     st_ino;	    /*索引节点号*/</span><br><span class="line">umode_t   st_mode;    /*文件类型和访问权限*/</span><br><span class="line">nlink_t   st_nlink;   /*该文件的链接数量*/</span><br><span class="line">uid_t     st_uid;     /*文件所有者的用户ID(UID)*/</span><br><span class="line">gid_t     st_gid;     /*文件所属组的组ID(GID)*/</span><br><span class="line">dev_t     st_rdev;    /*如果是一个特殊设备文件(如块设备文件、字符设备文件)则指出其所代表的具体设备号*/</span><br><span class="line">off_t     st_size;    /*文件大小(以字节为单位)*/</span><br><span class="line">unsigned long  st_blksize;     /*文件系统中块的大小*/</span><br><span class="line">unsigned long  st_blocks;      /*文件所占的块数*/</span><br><span class="line">time_t    st_atime;   /*最近一次访问的时间*/</span><br><span class="line">time_t    st_mtime;   /*最近一次修改的时间*/</span><br><span class="line">time_t    st_ctime;   /*最近一次状态改变(文件属性)的时间*/</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278607495-e2e8f1cd-1335-4a87-ae2d-5441f5114584.png#averageHue=%23eed4c2&clientId=u0d259272-43b4-4&from=drop&id=u1d28864c&originHeight=958&originWidth=1332&originalType=binary&ratio=2&rotation=0&showTitle=false&size=409873&status=done&style=none&taskId=u0e415e71-9f16-4293-b2e4-6e680484559&title=" alt="截屏2023-05-28 20.56.42.png"><img src="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278625354-b39a9165-c802-4154-b835-cb8c60e1605d.png#averageHue=%23fdf9f2&clientId=u0d259272-43b4-4&from=drop&id=ud746e3a4&originHeight=924&originWidth=1290&originalType=binary&ratio=2&rotation=0&showTitle=false&size=347179&status=done&style=none&taskId=u7f1323e5-249e-44c7-9840-1913995001c&title=" alt="截屏2023-05-28 20.57.03.png"><img src="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278637617-e2834cc9-db2f-4513-a450-c1291761a8a2.png#averageHue=%23fdf9ea&clientId=u0d259272-43b4-4&from=drop&id=u200e412d&originHeight=986&originWidth=1310&originalType=binary&ratio=2&rotation=0&showTitle=false&size=378873&status=done&style=none&taskId=u410139c7-a768-4bbb-ba9d-b93dba3d403&title=" alt="截屏2023-05-28 20.57.15.png"><img src="https://cdn.nlark.com/yuque/0/2023/png/34704016/1685278646195-01f08964-8561-4044-948f-897f7b95df06.png#averageHue=%235d6094&clientId=u0d259272-43b4-4&from=drop&id=ucc796d02&originHeight=846&originWidth=1346&originalType=binary&ratio=2&rotation=0&showTitle=false&size=841291&status=done&style=none&taskId=ufa8917ad-fc56-43c8-a222-7afc8f629ea&title=" alt="截屏2023-05-28 20.57.23.png"></p>
 
-      
     </div>
 
     
@@ -1584,346 +1641,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wp2002.github.io/2022/07/29/OverLeaf%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wp2002">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/07/29/OverLeaf%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Overleaf语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-07-29 20:27:23" itemprop="dateCreated datePublished" datetime="2022-07-29T20:27:23+08:00">2022-07-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-31 21:38:57" itemprop="dateModified" datetime="2022-07-31T21:38:57+08:00">2022-07-31</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
-<p>Overleaf是一个使用LaTeX进行多人协同编辑的平台，他可以在网站上进行操作编写，而不用下载LaTeX软件，他能对多种文档格式进行编写和阅读，并且他可以对应各种期刊的格式要求进行论文的编写，对于写论文来说相比Word可以减少一系列复杂的格式操作，从而更方便更简洁的对论文进行编写，是写论文的不二选择。本文内容来自于网络搜索，是对搜索的内容进行的总结，以便参考，参考资料地址附在最后。另附<a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf网址</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/07/29/OverLeaf%E8%AF%AD%E6%B3%95/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wp2002.github.io/2022/07/19/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wp2002">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/07/19/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">MySQL学习笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-07-19 14:48:23" itemprop="dateCreated datePublished" datetime="2022-07-19T14:48:23+08:00">2022-07-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-21 10:31:43" itemprop="dateModified" datetime="2022-09-21T10:31:43+08:00">2022-09-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
-<p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL是最流行的关系型数据库管理系统之一,MySQL是一种关系型数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言。现在通过运用blog记录的方式对平时的学习内容进行记录和总结。另附<a target="_blank" rel="noopener" href="https://www.mysql.com/">MySQL数据库官网</a>和<a target="_blank" rel="noopener" href="https://www.jetbrains.com.cn/datagrip/">SQL图形化页面工具</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/07/19/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/29/OverLeaf%E8%AF%AD%E6%B3%95/" rel="prev" title="Overleaf语法">
+                  <i class="fa fa-chevron-left"></i> Overleaf语法
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wp2002.github.io/2022/07/03/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wp2002">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/07/03/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">JavaSE学习笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-07-03 21:28:13" itemprop="dateCreated datePublished" datetime="2022-07-03T21:28:13+08:00">2022-07-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-16 16:12:40" itemprop="dateModified" datetime="2022-07-16T16:12:40+08:00">2022-07-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><hr>
-<p>在之前的寒假和现在的暑假一直在看黑马程序员的JavaSE教程，但随着时间的流逝以及期末考试期间没有对java进行练习，使得一些知识都快忘记了，现在通过运用blog记录的方式对平时的内容进行总结，并记录自己技能的增长。附赠<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Java官方API文档</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/07/03/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wp2002.github.io/2022/01/19/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wp2002">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wp2002.blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/19/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">2021年年终总结</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-01-19 18:57:09" itemprop="dateCreated datePublished" datetime="2022-01-19T18:57:09+08:00">2022-01-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-06 18:29:05" itemprop="dateModified" datetime="2022-07-06T18:29:05+08:00">2022-07-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="高中"><a href="#高中" class="headerlink" title="高中"></a>高中</h2><p>在今年年初，高三的寒假再一次与疫情相逢，提前一个星期的寒假生活并没使我感到<br>与平时假期相同的快乐，反而感到十分的慌张，但在高考愈发临近的时候，身边的压力却<br>感觉越来越小的，再也没有以前的慌张，颇有一种当一天和尚撞一天钟的感觉，天天在教<br>室，办公室中泡着，渐渐习惯了高考的到来，享受着考前的温馨高中时光，那首有这关心<br>着我的历史老师，在我没去吃饭的中午给我送来零食，在文科办公室门口每天中午和同学<br>浑水摸鱼的背历史，美好的落霞伴随着当时的忙碌。<br><img src="/img/01.jpeg" alt="01.jpeg"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/19/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
@@ -1966,7 +1702,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://wp2002.github.io/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://wp2002.github.io/2023/05/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 
 </body>
